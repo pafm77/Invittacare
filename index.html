@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="siteTitle">Almalar - Apoio Domiciliário</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configuração de Cores e Estilos Personalizados -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'verde-suave': '#DCEBE8',
+                        'verde-escuro': '#2C4E4B',
+                        'cinza-botao': '#839E94',
+                        'cinza-claro': '#AAB8B6',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos adicionais para um look mais polido */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-verde-escuro">
+
+    <!-- =============================================== -->
+    <!-- Cabeçalho (Header) e Navegação (Navbar)         -->
+    <!-- =============================================== -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Logotipo e Título -->
+            <a href="#" class="flex items-center space-x-3">
+                <!-- MODIFICADO: Corrigido para .png.
+                     Certifique-se que o ficheiro 'logotipo.png' está na mesma pasta que este ficheiro HTML. -->
+                <img src="logotipo.png" alt="Logotipo Almalar" style="height: 60px;">
+            </a>
+
+            <!-- Menu de Navegação para Desktop -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#servicos" class="text-verde-escuro hover:text-cinza-botao transition-colors duration-300" data-i18n="navServices">Serviços</a>
+                <a href="#testemunhos" class="text-verde-escuro hover:text-cinza-botao transition-colors duration-300" data-i18n="navTestimonials">Testemunhos</a>
+                <a href="#blog" class="text-verde-escuro hover:text-cinza-botao transition-colors duration-300" data-i18n="navBlog">Blog</a>
+                <a href="#contacto" class="text-verde-escuro hover:text-cinza-botao transition-colors duration-300" data-i18n="navContact">Contacto</a>
+                
+                <button id="lang-switcher" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro transition-colors duration-300">
+                    EN
+                </button>
+            </nav>
+            
+            <div class="md:hidden flex items-center space-x-4">
+                <button id="lang-switcher-mobile" class="bg-cinza-botao text-white px-3 py-1.5 rounded-md hover:bg-verde-escuro transition-colors duration-300 text-sm">
+                    EN
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =============================================== -->
+    <!-- Conteúdo Principal (Main)                       -->
+    <!-- =============================================== -->
+    <main>
+
+        <section class="bg-verde-suave py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-verde-escuro mb-4" data-i18n="heroTitle">Cuidado e Conforto no Seu Lar</h1>
+                <p class="text-lg md:text-xl text-verde-escuro max-w-3xl mx-auto" data-i18n="heroSubtitle">Oferecemos um leque completo de serviços de apoio domiciliário, pensados para garantir o seu bem-estar e o da sua família.</p>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="servicesTitle">Os Nossos Serviços</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Serviço: Enfermagem -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- MODIFICADO: Nova imagem de enfermagem -->
+                        <img src="https://images.pexels.com/photos/6703031/pexels-photo-6703031.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de uma enfermeira a preparar a medicação para um idoso]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="serviceNursingTitle">Enfermagem</h3>
+                            <p class="text-cinza-claro" data-i18n="serviceNursingDesc">Disponibilizamos cuidados de enfermagem especializados, incluindo gestão de medicação, tratamento de feridas e monitorização de sinais vitais, por profissionais certificados.</p>
+                        </div>
+                    </div>
+
+                    <!-- Serviço: Psicologia -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de uma sessão de psicologia com uma pessoa idosa]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="servicePsychologyTitle">Psicologia</h3>
+                            <p class="text-cinza-claro" data-i18n="servicePsychologyDesc">O nosso apoio psicológico ajuda a promover a saúde mental e o bem-estar emocional, com sessões individuais para lidar com ansiedade, depressão e transições de vida.</p>
+                        </div>
+                    </div>
+
+                    <!-- Serviço: Fisioterapia -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- MODIFICADO: Nova imagem de fisioterapia -->
+                        <img src="https://images.pexels.com/photos/8639739/pexels-photo-8639739.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de um fisioterapeuta a realizar exercícios com um paciente idoso]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="servicePhysiotherapyTitle">Fisioterapia</h3>
+                            <p class="text-cinza-claro" data-i18n="servicePhysiotherapyDesc">Programas de reabilitação e fisioterapia personalizados para auxiliar na recuperação de lesões, melhorar a mobilidade e prevenir futuros problemas físicos, aumentando a qualidade de vida.</p>
+                        </div>
+                    </div>
+
+                    <!-- MODIFICADO: Serviço de Nutrição -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://images.pexels.com/photos/6995133/pexels-photo-6995133.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de uma nutricionista a apresentar um plano alimentar a um casal de idosos]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="serviceNutritionTitle">Nutrição</h3>
+                            <p class="text-cinza-claro" data-i18n="serviceNutritionDesc">Apoio nutricional focado nas necessidades da terceira idade, com planeamento de refeições equilibradas, saborosas e adaptadas a condições de saúde específicas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Serviço: Limpeza -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://images.pexels.com/photos/4239147/pexels-photo-4239147.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de um serviço de limpeza profissional a arrumar uma casa]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="serviceCleaningTitle">Limpeza Doméstica</h3>
+                            <p class="text-cinza-claro" data-i18n="serviceCleaningDesc">Os nossos serviços de limpeza e organização garantem que o seu lar se mantém um ambiente agradável, seguro e acolhedor, adaptado às suas necessidades.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Serviço: Apoio Domiciliário -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- MODIFICADO: Nova imagem de apoio domiciliário -->
+                        <img src="https://images.pexels.com/photos/7148568/pexels-photo-7148568.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de uma auxiliar de geriatria a passar a ferro]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="serviceSupportTitle">Apoio Domiciliário</h3>
+                            <p class="text-cinza-claro" data-i18n="serviceSupportDesc">Prestamos acompanhamento e ajuda nas tarefas diárias, como tratamento de roupas, compras, recados e companhia, promovendo a autonomia e um melhor dia a dia.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="testemunhos" class="bg-verde-suave py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="testimonialsTitle">Testemunhos</h2>
+                <div class="flex flex-wrap justify-center gap-10">
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
+                        <p class="text-cinza-claro italic mb-4" data-i18n="testimonial1Text">"O serviço de enfermagem foi excecional. Senti-me sempre segura e bem cuidada. Uma equipa muito profissional e humana."</p>
+                        <p class="text-verde-escuro font-bold text-right" data-i18n="testimonial1Author">- Maria Silva</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
+                        <p class="text-cinza-claro italic mb-4" data-i18n="testimonial2Text">"A ajuda com a limpeza e as tarefas diárias foi uma bênção para os meus pais. Recomendo vivamente a Almalar a todos."</p>
+                        <p class="text-verde-escuro font-bold text-right" data-i18n="testimonial2Author">- João Costa</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="blogTitle">Blog Informativo</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de um cérebro saudável]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="post1Title">5 Dicas para Manter a Mente Ativa na Terceira Idade</h3>
+                            <p class="text-cinza-claro mb-4" data-i18n="post1Snippet">Descubra atividades e hábitos simples que ajudam a preservar a função cognitiva e a promover a saúde mental...</p>
+                            <a href="#" class="text-verde-escuro font-bold hover:text-cinza-botao" data-i18n="readMore">Ler Mais</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de uma casa segura e adaptada para idosos]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="post2Title">Como Adaptar a Casa para Garantir a Segurança de Idosos</h3>
+                            <p class="text-cinza-claro mb-4" data-i18n="post2Snippet">Pequenas alterações em casa podem prevenir quedas e acidentes. Saiba por onde começar para criar um ambiente mais seguro...</p>
+                             <a href="#" class="text-verde-escuro font-bold hover:text-cinza-botao" data-i18n="readMore">Ler Mais</a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://images.pexels.com/photos/69434/pexels-photo-69434.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de alimentos saudáveis numa mesa]" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2" data-i18n="post3Title">A Importância da Nutrição no Envelhecimento Saudável</h3>
+                            <p class="text-cinza-claro mb-4" data-i18n="post3Snippet">Uma dieta equilibrada é fundamental para a energia e saúde. Conheça os nutrientes essenciais e como incluí-los nas refeições...</p>
+                             <a href="#" class="text-verde-escuro font-bold hover:text-cinza-botao" data-i18n="readMore">Ler Mais</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="bg-verde-suave py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="contactTitle">Contacto</h2>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <form id="contact-form">
+                        <div class="mb-6">
+                            <label for="name" class="block text-verde-escuro font-bold mb-2" data-i18n="formName">Nome</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-cinza-claro rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-verde-escuro font-bold mb-2" data-i18n="formEmail">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-cinza-claro rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-verde-escuro font-bold mb-2" data-i18n="formMessage">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-cinza-claro rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-cinza-botao text-white font-bold px-8 py-3 rounded-md hover:bg-verde-escuro transition-colors duration-300" data-i18n="formSubmit">Enviar</button>
+                        </div>
+                    </form>
+                    <p id="form-feedback" class="text-center mt-4"></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-verde-escuro py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-cinza-claro" data-i18n="footerText">© 2025 Almalar - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // MODIFICADO: Traduções atualizadas para o serviço de Nutrição
+            const translations = {
+                en: {
+                    siteTitle: "Almalar - Home Care Support",
+                    navServices: "Services",
+                    navTestimonials: "Testimonials",
+                    navBlog: "Blog",
+                    navContact: "Contact",
+                    heroTitle: "Care and Comfort in Your Home",
+                    heroSubtitle: "We offer a full range of home support services, designed to ensure your well-being and that of your family.",
+                    servicesTitle: "Our Services",
+                    serviceNursingTitle: "Nursing",
+                    serviceNursingDesc: "We provide specialized nursing care, including medication management, wound treatment, and vital signs monitoring, all performed by certified professionals.",
+                    servicePsychologyTitle: "Psychology",
+                    servicePsychologyDesc: "Our psychological support service helps promote mental health and emotional well-being, offering individual sessions to deal with anxiety, depression, and life transitions.",
+                    servicePhysiotherapyTitle: "Physiotherapy",
+                    servicePhysiotherapyDesc: "Customized rehabilitation and physiotherapy programs to aid in injury recovery, improve mobility, and prevent future physical issues, enhancing quality of life.",
+                    serviceNutritionTitle: "Nutrition",
+                    serviceNutritionDesc: "Nutritional support focused on the needs of the elderly, with planning of balanced, tasty meals adapted to specific health conditions.",
+                    serviceCleaningTitle: "House Cleaning",
+                    serviceCleaningDesc: "Our cleaning and organization services ensure your home remains a pleasant, safe, and welcoming environment, tailored to your specific needs.",
+                    serviceSupportTitle: "Home Support",
+                    serviceSupportDesc: "We provide daily support, including laundry care, grocery shopping, errands, and companionship, promoting autonomy and a better daily routine.",
+                    testimonialsTitle: "Testimonials",
+                    testimonial1Text: "\"The nursing service was exceptional. I always felt safe and well-cared for. A very professional and humane team.\"",
+                    testimonial1Author: "- Maria Silva",
+                    testimonial2Text: "\"The help with cleaning and daily tasks was a blessing for my parents. I highly recommend Almalar to everyone.\"",
+                    testimonial2Author: "- João Costa",
+                    blogTitle: "Informative Blog",
+                    post1Title: "5 Tips to Keep Your Mind Active in Old Age",
+                    post1Snippet: "Discover simple activities and habits that help preserve cognitive function and promote mental health...",
+                    post2Title: "How to Adapt Your Home to Ensure Seniors' Safety",
+                    post2Snippet: "Small changes at home can prevent falls and accidents. Learn where to start to create a safer environment...",
+                    post3Title: "The Importance of Nutrition in Healthy Aging",
+                    post3Snippet: "A balanced diet is key for energy and health. Learn about essential nutrients and how to include them in meals...",
+                    readMore: "Read More",
+                    contactTitle: "Contact",
+                    formName: "Name",
+                    formEmail: "Email",
+                    formMessage: "Message",
+                    formSubmit: "Send",
+                    formSuccess: "Message sent successfully! We will contact you soon.",
+                    formError: "An error occurred. Please try again later.",
+                    footerText: "© 2025 Almalar - All rights reserved"
+                },
+                pt: {
+                    siteTitle: "Almalar - Apoio Domiciliário",
+                    navServices: "Serviços",
+                    navTestimonials: "Testemunhos",
+                    navBlog: "Blog",
+                    navContact: "Contacto",
+                    heroTitle: "Cuidado e Conforto no Seu Lar",
+                    heroSubtitle: "Oferecemos um leque completo de serviços de apoio domiciliário, pensados para garantir o seu bem-estar e o da sua família.",
+                    servicesTitle: "Os Nossos Serviços",
+                    serviceNursingTitle: "Enfermagem",
+                    serviceNursingDesc: "Disponibilizamos cuidados de enfermagem especializados, incluindo gestão de medicação, tratamento de feridas e monitorização de sinais vitais, por profissionais certificados.",
+                    servicePsychologyTitle: "Psicologia",
+                    servicePsychologyDesc: "O nosso apoio psicológico ajuda a promover a saúde mental e o bem-estar emocional, com sessões individuais para lidar com ansiedade, depressão e transições de vida.",
+                    servicePhysiotherapyTitle: "Fisioterapia",
+                    servicePhysiotherapyDesc: "Programas de reabilitação e fisioterapia personalizados para auxiliar na recuperação de lesões, melhorar a mobilidade e prevenir futuros problemas físicos, aumentando a qualidade de vida.",
+                    serviceNutritionTitle: "Nutrição",
+                    serviceNutritionDesc: "Apoio nutricional focado nas necessidades da terceira idade, com planeamento de refeições equilibradas, saborosas e adaptadas a condições de saúde específicas.",
+                    serviceCleaningTitle: "Limpeza Doméstica",
+                    serviceCleaningDesc: "Os nossos serviços de limpeza e organização garantem que o seu lar se mantém um ambiente agradável, seguro e acolhedor, adaptado às suas necessidades.",
+                    serviceSupportTitle: "Apoio Domiciliário",
+                    serviceSupportDesc: "Prestamos acompanhamento e ajuda nas tarefas diárias, como tratamento de roupas, compras, recados e companhia, promovendo a autonomia e um melhor dia a dia.",
+                    testimonialsTitle: "Testemunhos",
+                    testimonial1Text: "\"O serviço de enfermagem foi excecional. Senti-me sempre segura e bem cuidada. Uma equipa muito profissional e humana.\"",
+                    testimonial1Author: "- Maria Silva",
+                    testimonial2Text: "\"A ajuda com a limpeza e as tarefas diárias foi uma bênção para os meus pais. Recomendo vivamente a Almalar a todos.\"",
+                    testimonial2Author: "- João Costa",
+                    blogTitle: "Blog Informativo",
+                    post1Title: "5 Dicas para Manter a Mente Ativa na Terceira Idade",
+                    post1Snippet: "Descubra atividades e hábitos simples que ajudam a preservar a função cognitiva e a promover a saúde mental...",
+                    post2Title: "Como Adaptar a Casa para Garantir a Segurança de Idosos",
+                    post2Snippet: "Pequenas alterações em casa podem prevenir quedas e acidentes. Saiba por onde começar para criar um ambiente mais seguro...",
+                    post3Title: "A Importância da Nutrição no Envelhecimento Saudável",
+                    post3Snippet: "Uma dieta equilibrada é fundamental para a energia e saúde. Conheça os nutrientes essenciais e como incluí-los nas refeições...",
+                    readMore: "Ler Mais",
+                    contactTitle: "Contacto",
+                    formName: "Nome",
+                    formEmail: "Email",
+                    formMessage: "Mensagem",
+                    formSubmit: "Enviar",
+                    formSuccess: "Mensagem enviada com sucesso! Entraremos em contacto em breve.",
+                    formError: "Ocorreu um erro. Por favor, tente novamente mais tarde.",
+                    footerText: "© 2025 Almalar - Todos os direitos reservados"
+                }
+            };
+
+            let currentLang = 'pt';
+            const langSwitcher = document.getElementById('lang-switcher');
+            const langSwitcherMobile = document.getElementById('lang-switcher-mobile');
+
+            function setLanguage(lang) {
+                currentLang = lang;
+                document.documentElement.lang = lang;
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.innerHTML = translations[lang][key];
+                    }
+                });
+                langSwitcher.textContent = lang === 'pt' ? 'EN' : 'PT';
+                langSwitcherMobile.textContent = lang === 'pt' ? 'EN' : 'PT';
+            }
+
+            function toggleLanguage() {
+                const newLang = currentLang === 'pt' ? 'en' : 'pt';
+                setLanguage(newLang);
+            }
+
+            langSwitcher.addEventListener('click', toggleLanguage);
+            langSwitcherMobile.addEventListener('click', toggleLanguage);
+            
+            setLanguage('pt');
+
+            const contactForm = document.getElementById('contact-form');
+            const formFeedback = document.getElementById('form-feedback');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                
+                formFeedback.textContent = translations[currentLang].formSuccess;
+                formFeedback.classList.remove('text-red-500');
+                formFeedback.classList.add('text-green-600');
+                
+                contactForm.reset(); 
+
+                setTimeout(() => {
+                    formFeedback.textContent = '';
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
