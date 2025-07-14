@@ -41,7 +41,6 @@
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center py-3">
                 <a href="index.html" class="flex items-center">
-                    <!-- MODIFICADO: Logótipo com URL público e tamanho aumentado -->
                     <img src="https://i.postimg.cc/0QLzVNMm/logotipo.png" alt="Logotipo Almalar" style="height: 80px;">
                 </a>
 
@@ -143,21 +142,75 @@
             </div>
         </section>
 
-        <section id="faq-preview" class="bg-verde-suave py-20">
+        <!-- Secção de Pedido de Orçamento -->
+        <section id="orcamento" class="bg-verde-suave py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="faqTitle">Perguntas Frequentes</h2>
-                <div class="max-w-4xl mx-auto space-y-4">
-                    <div>
-                        <h3 class="font-bold text-lg" data-i18n="faq1Question">Como funciona o processo de contratação?</h3>
-                        <p class="text-cinza-claro mt-1" data-i18n="faq1Answer">O processo começa com uma avaliação inicial gratuita para entendermos as suas necessidades. Depois, criamos um plano de cuidados personalizado e selecionamos o profissional mais adequado para si.</p>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-lg" data-i18n="faq2Question">Os serviços são ajustáveis?</h3>
-                        <p class="text-cinza-claro mt-1" data-i18n="faq2Answer">Sim. Todos os nossos planos são flexíveis e podem ser ajustados a qualquer momento para responder a novas necessidades ou alterações na rotina.</p>
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <a href="faq.html" class="text-verde-escuro font-bold hover:text-cinza-botao text-lg" data-i18n="seeAllFaqs">Ver mais perguntas &rarr;</a>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-2" data-i18n="quoteTitle">Peça o Seu Orçamento</h2>
+                <p class="text-lg text-center text-cinza-claro mb-12" data-i18n="quoteSubtitle">Receba uma proposta personalizada e sem compromisso.</p>
+
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <form action="https://formspree.io/f/geral@almalar.pt" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="quote-nome" class="block text-verde-escuro font-bold mb-2" data-i18n="formFirstName">Nome <span class="text-red-500">*</span></label>
+                                <input type="text" id="quote-nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                            </div>
+                            <div>
+                                <label for="quote-apelido" class="block text-verde-escuro font-bold mb-2" data-i18n="formLastName">Apelido <span class="text-red-500">*</span></label>
+                                <input type="text" id="quote-apelido" name="apelido" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                            </div>
+                            <div>
+                                <label for="quote-concelho" class="block text-verde-escuro font-bold mb-2" data-i18n="formCounty">Concelho <span class="text-red-500">*</span></label>
+                                <select id="quote-concelho" name="concelho" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                                    <option value="" disabled selected data-i18n="formSelectCounty">Selecione um concelho</option>
+                                    <option value="Amares">Amares</option>
+                                    <option value="Barcelos">Barcelos</option>
+                                    <option value="Braga">Braga</option>
+                                    <option value="Cabeceiras de Basto">Cabeceiras de Basto</option>
+                                    <option value="Celorico de Basto">Celorico de Basto</option>
+                                    <option value="Esposende">Esposende</option>
+                                    <option value="Fafe">Fafe</option>
+                                    <option value="Guimarães">Guimarães</option>
+                                    <option value="Póvoa de Lanhoso">Póvoa de Lanhoso</option>
+                                    <option value="Terras de Bouro">Terras de Bouro</option>
+                                    <option value="Vieira do Minho">Vieira do Minho</option>
+                                    <option value="Vila Nova de Famalicão">Vila Nova de Famalicão</option>
+                                    <option value="Vila Verde">Vila Verde</option>
+                                    <option value="Vizela">Vizela</option>
+                                </select>
+                            </div>
+                             <div>
+                                <label for="quote-servico" class="block text-verde-escuro font-bold mb-2" data-i18n="formService">Serviço Pretendido <span class="text-red-500">*</span></label>
+                                <select id="quote-servico" name="servico" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                                    <option value="" disabled selected data-i18n="formSelectService">Selecione um serviço</option>
+                                    <option data-i18n="serviceNursing" value="Enfermagem">Enfermagem</option>
+                                    <option data-i18n="servicePsychology" value="Psicologia">Psicologia</option>
+                                    <option data-i18n="servicePhysiotherapy" value="Fisioterapia">Fisioterapia</option>
+                                    <option data-i18n="serviceNutrition" value="Nutrição">Nutrição</option>
+                                    <option data-i18n="serviceCleaning" value="Limpeza Doméstica">Limpeza Doméstica</option>
+                                    <option data-i18n="serviceSupport" value="Apoio Domiciliário">Apoio Domiciliário</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="quote-email" class="block text-verde-escuro font-bold mb-2" data-i18n="formEmail">Email <span class="text-red-500">*</span></label>
+                                <input type="email" id="quote-email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                            </div>
+                            <div>
+                                <label for="quote-telemovel" class="block text-verde-escuro font-bold mb-2" data-i18n="formPhone">Nº de Telemóvel <span class="text-red-500">*</span></label>
+                                <input type="tel" id="quote-telemovel" name="telemovel" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="quote-comentario" class="block text-verde-escuro font-bold mb-2" data-i18n="formComment">Comentário (Opcional)</label>
+                                <textarea id="quote-comentario" name="comentario" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao"></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-sm text-cinza-claro" data-i18n="formRequiredLegend">
+                            <span class="text-red-500">*</span> Campo de preenchimento obrigatório
+                        </div>
+                        <div class="text-center mt-8">
+                            <button type="submit" class="bg-cinza-botao text-white font-bold px-8 py-3 rounded-md hover:bg-verde-escuro transition-colors duration-300" data-i18n="formSubmit">Submeter Pedido</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -248,6 +301,25 @@
                     faq2Question: "Are the services adjustable?",
                     faq2Answer: "Yes. All our plans are flexible and can be adjusted at any time to meet new needs or changes in routine.",
                     seeAllFaqs: "See more questions &rarr;",
+                    quoteTitle: "Request Your Quote",
+                    quoteSubtitle: "Receive a personalized, no-obligation proposal.",
+                    formFirstName: "First Name",
+                    formLastName: "Last Name",
+                    formCounty: "Municipality",
+                    formSelectCounty: "Select a municipality",
+                    formService: "Desired Service",
+                    formSelectService: "Select a service",
+                    serviceNursing: "Nursing",
+                    servicePsychology: "Psychology",
+                    servicePhysiotherapy: "Physiotherapy",
+                    serviceNutrition: "Nutrition",
+                    serviceCleaning: "House Cleaning",
+                    serviceSupport: "Home Support",
+                    formEmail: "Email",
+                    formPhone: "Phone Number",
+                    formComment: "Comment (Optional)",
+                    formSubmit: "Submit Request",
+                    formRequiredLegend: "* Required field",
                     footerAbout: "About Almalar",
                     footerAboutText: "Care and comfort in your home. Our mission is to ensure your well-being with excellent home care services.",
                     footerLinks: "Navigation",
@@ -288,6 +360,25 @@
                     faq2Question: "Os serviços são ajustáveis?",
                     faq2Answer: "Sim. Todos os nossos planos são flexíveis e podem ser ajustados a qualquer momento para responder a novas necessidades ou alterações na rotina.",
                     seeAllFaqs: "Ver mais perguntas &rarr;",
+                    quoteTitle: "Peça o Seu Orçamento",
+                    quoteSubtitle: "Receba uma proposta personalizada e sem compromisso.",
+                    formFirstName: "Nome",
+                    formLastName: "Apelido",
+                    formCounty: "Concelho",
+                    formSelectCounty: "Selecione um concelho",
+                    formService: "Serviço Pretendido",
+                    formSelectService: "Selecione um serviço",
+                    serviceNursing: "Enfermagem",
+                    servicePsychology: "Psicologia",
+                    servicePhysiotherapy: "Fisioterapia",
+                    serviceNutrition: "Nutrição",
+                    serviceCleaning: "Limpeza Doméstica",
+                    serviceSupport: "Apoio Domiciliário",
+                    formEmail: "Email",
+                    formPhone: "Nº de Telemóvel",
+                    formComment: "Comentário (Opcional)",
+                    formSubmit: "Submeter Pedido",
+                    formRequiredLegend: "* Campo de preenchimento obrigatório",
                     footerAbout: "Sobre a Almalar",
                     footerAboutText: "Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.",
                     footerLinks: "Navegação",
