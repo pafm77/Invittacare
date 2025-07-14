@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- MODIFICADO: Script do Tailwind CSS atualizado para incluir o plugin de tipografia -->
     <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
 
     <script>
@@ -24,7 +23,6 @@
                     fontFamily: {
                         'sans': ['Inter', 'sans-serif'],
                     },
-                    // Configuração para personalizar as cores do plugin de tipografia
                     typography: (theme) => ({
                         DEFAULT: {
                             css: {
@@ -39,9 +37,7 @@
                         },
                     }),
                 }
-            },
-            // MODIFICADO: A secção de plugins foi removida para evitar o erro 'require is not defined' no navegador.
-            // O plugin agora é carregado diretamente no URL do script acima.
+            }
         }
     </script>
     <style> body { font-family: 'Inter', sans-serif; } #mobile-menu { transition: max-height 0.3s ease-in-out; } </style>
@@ -53,7 +49,7 @@
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center py-3">
                 <a href="index.html" class="flex items-center">
-                    <img src="image.png" alt="Logotipo Almalar" style="height: 50px;">
+                    <img src="https://i.postimg.cc/0QLzVNMm/logotipo.png" alt="Logotipo Almalar" style="height: 80px;">
                 </a>
                 <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
                     <a href="sobre-nos.html" class="text-verde-escuro font-bold hover:text-cinza-botao transition-colors" data-i18n="navAbout">Sobre Nós</a>
@@ -98,8 +94,7 @@
 
         <div class="py-20">
             <div class="container mx-auto px-6 max-w-4xl">
-                <!-- A classe 'prose' do plugin de tipografia irá aplicar os estilos definidos no 'tailwind.config' -->
-                <div class="prose lg:prose-xl max-w-none">
+                <div class="prose lg:prose-xl max-w-none text-verde-escuro">
                     <p class="lead text-xl" data-i18n="p1">A Almalar nasceu de uma ideia simples, mas poderosa: todos merecem envelhecer com dignidade, conforto e alegria, no lugar que mais amam - a sua casa. A nossa missão é proporcionar um cuidado de excelência que vai além do básico, focando-nos na qualidade de vida, na autonomia e no bem-estar emocional de cada pessoa que servimos.</p>
                     
                     <p data-i18n="p2">Entendemos que cada família e cada situação é única. Por isso, não oferecemos soluções padronizadas. Em vez disso, trabalhamos consigo para criar um plano de cuidados totalmente personalizado, que respeita as rotinas, as preferências e as necessidades individuais. Queremos ser a extensão da sua família, uma presença de confiança que garante não só o apoio nas tarefas diárias, mas também companhia, carinho e segurança.</p>
