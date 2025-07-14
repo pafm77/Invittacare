@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">Sobre Nós - Almalar</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- MODIFICADO: Script do Tailwind CSS atualizado para incluir o plugin de tipografia -->
+    <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'verde-suave': '#DCEBE8',
+                        'verde-escuro': '#2C4E4B',
+                        'cinza-botao': '#839E94',
+                        'cinza-claro': '#AAB8B6',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    // Configuração para personalizar as cores do plugin de tipografia
+                    typography: (theme) => ({
+                        DEFAULT: {
+                            css: {
+                                color: theme('colors.verde-escuro'),
+                                h2: {
+                                    color: theme('colors.verde-escuro'),
+                                },
+                                strong: {
+                                    color: theme('colors.verde-escuro'),
+                                },
+                            },
+                        },
+                    }),
+                }
+            },
+            // MODIFICADO: A secção de plugins foi removida para evitar o erro 'require is not defined' no navegador.
+            // O plugin agora é carregado diretamente no URL do script acima.
+        }
+    </script>
+    <style> body { font-family: 'Inter', sans-serif; } #mobile-menu { transition: max-height 0.3s ease-in-out; } </style>
+</head>
+<body class="bg-white text-verde-escuro">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center py-3">
+                <a href="index.html" class="flex items-center">
+                    <img src="image.png" alt="Logotipo Almalar" style="height: 50px;">
+                </a>
+                <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="sobre-nos.html" class="text-verde-escuro font-bold hover:text-cinza-botao transition-colors" data-i18n="navAbout">Sobre Nós</a>
+                    <a href="servicos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navServices">Serviços</a>
+                    <a href="testemunhos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navTestimonials">Testemunhos</a>
+                    <a href="blog.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navBlog">Blog</a>
+                    <a href="faq.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navFaq">FAQ</a>
+                    <a href="contacto.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navContact">Contacto</a>
+                </nav>
+                <div class="hidden md:flex items-center gap-4">
+                    <button id="lang-switcher" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro">EN</button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-verde-escuro focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0">
+                <nav class="flex flex-col space-y-4 py-4 text-center">
+                    <a href="sobre-nos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navAbout">Sobre Nós</a>
+                    <a href="servicos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navServices">Serviços</a>
+                    <a href="testemunhos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navTestimonials">Testemunhos</a>
+                    <a href="blog.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navBlog">Blog</a>
+                    <a href="faq.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navFaq">FAQ</a>
+                    <a href="contacto.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navContact">Contacto</a>
+                    <div class="pt-4">
+                        <button id="lang-switcher-mobile" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro w-1/2 mx-auto">EN</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="bg-verde-suave py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-verde-escuro" data-i18n="title">A Nossa História</h1>
+                <p class="text-lg text-verde-escuro mt-2" data-i18n="subtitle">Cuidar é a nossa vocação.</p>
+            </div>
+        </div>
+
+        <div class="py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <!-- A classe 'prose' do plugin de tipografia irá aplicar os estilos definidos no 'tailwind.config' -->
+                <div class="prose lg:prose-xl max-w-none">
+                    <p class="lead text-xl" data-i18n="p1">A Almalar nasceu de uma ideia simples, mas poderosa: todos merecem envelhecer com dignidade, conforto e alegria, no lugar que mais amam - a sua casa. A nossa missão é proporcionar um cuidado de excelência que vai além do básico, focando-nos na qualidade de vida, na autonomia e no bem-estar emocional de cada pessoa que servimos.</p>
+                    
+                    <p data-i18n="p2">Entendemos que cada família e cada situação é única. Por isso, não oferecemos soluções padronizadas. Em vez disso, trabalhamos consigo para criar um plano de cuidados totalmente personalizado, que respeita as rotinas, as preferências e as necessidades individuais. Queremos ser a extensão da sua família, uma presença de confiança que garante não só o apoio nas tarefas diárias, mas também companhia, carinho e segurança.</p>
+
+                    <h2 data-i18n="valuesTitle">Os Nossos Valores</h2>
+                    <ul>
+                        <li data-i18n="value1"><strong>Empatia:</strong> Colocamo-nos sempre no lugar do outro, procurando entender e responder às suas necessidades emocionais e físicas.</li>
+                        <li data-i18n="value2"><strong>Profissionalismo:</strong> A nossa equipa é composta por profissionais qualificados, experientes e dedicados, em formação contínua.</li>
+                        <li data-i18n="value3"><strong>Dignidade:</strong> Respeitamos a individualidade, a privacidade e a história de cada cliente, tratando todos com a máxima dignidade.</li>
+                        <li data-i18n="value4"><strong>Confiança:</strong> Construímos relações transparentes e honestas com as famílias, sendo um pilar de apoio em todos os momentos.</li>
+                    </ul>
+
+                    <p data-i18n="p3">Acreditamos que o apoio domiciliário é a chave para um envelhecimento feliz e tranquilo. Estamos comprometidos em fazer a diferença na vida dos nossos clientes e das suas famílias, todos os dias.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-verde-escuro text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-bold text-lg mb-4" data-i18n="footerAbout">Sobre a Almalar</h3>
+                    <p class="text-cinza-claro text-sm" data-i18n="footerAboutText">Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4" data-i18n="footerLinks">Navegação</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="sobre-nos.html" class="hover:text-cinza-botao" data-i18n="navAbout">Sobre Nós</a></li>
+                        <li><a href="servicos.html" class="hover:text-cinza-botao" data-i18n="navServices">Serviços</a></li>
+                        <li><a href="blog.html" class="hover:text-cinza-botao" data-i18n="navBlog">Blog</a></li>
+                        <li><a href="faq.html" class="hover:text-cinza-botao" data-i18n="navFaq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4" data-i18n="footerContact">Contactos</h3>
+                    <ul class="space-y-2 text-cinza-claro text-sm">
+                        <li class="flex items-center justify-center md:justify-start gap-2"><span data-i18n="footerArea">Distrito de Braga</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-2"><a href="tel:+351915471016" class="hover:text-cinza-botao">915 471 016</a></li>
+                        <li class="flex items-center justify-center md:justify-start gap-2"><a href="mailto:geral@almalar.pt" class="hover:text-cinza-botao">geral@almalar.pt</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="font-bold text-lg mb-4" data-i18n="footerFollow">Siga-nos</h3>
+                    <div class="flex space-x-4 justify-center md:justify-start">
+                        <a href="#" aria-label="Facebook" class="text-cinza-claro hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/></svg></a>
+                        <a href="#" aria-label="Instagram" class="text-cinza-claro hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.28-.059-1.688-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="text-cinza-claro text-sm" data-i18n="footerRights">© 2025 Almalar - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- LÓGICA DO MENU MOBILE ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
+                    mobileMenu.style.maxHeight = '0px';
+                } else {
+                    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                }
+            });
+
+            // --- LÓGICA DE TRADUÇÃO ---
+            const translations = {
+                en: {
+                    pageTitle: "About Us - Almalar",
+                    navAbout: "About Us",
+                    navServices: "Services",
+                    navTestimonials: "Testimonials",
+                    navBlog: "Blog",
+                    navFaq: "FAQ",
+                    navContact: "Contact",
+                    title: "Our Story",
+                    subtitle: "Caring is our calling.",
+                    p1: "Almalar was born from a simple yet powerful idea: everyone deserves to age with dignity, comfort, and joy, in the place they love most - their home. Our mission is to provide excellent care that goes beyond the basics, focusing on quality of life, autonomy, and the emotional well-being of every person we serve.",
+                    p2: "We understand that every family and every situation is unique. That's why we don't offer standardized solutions. Instead, we work with you to create a fully personalized care plan that respects routines, preferences, and individual needs. We want to be an extension of your family, a trusted presence that ensures not only support with daily tasks but also companionship, affection, and security.",
+                    valuesTitle: "Our Values",
+                    value1: "<strong>Empathy:</strong> We always put ourselves in others' shoes, seeking to understand and respond to their emotional and physical needs.",
+                    value2: "<strong>Professionalism:</strong> Our team consists of qualified, experienced, and dedicated professionals undergoing continuous training.",
+                    value3: "<strong>Dignity:</strong> We respect the individuality, privacy, and history of each client, treating everyone with the utmost dignity.",
+                    value4: "<strong>Trust:</strong> We build transparent and honest relationships with families, serving as a pillar of support at all times.",
+                    p3: "We believe that home care is the key to a happy and peaceful aging process. We are committed to making a difference in the lives of our clients and their families, every day.",
+                    footerAbout: "About Almalar",
+                    footerAboutText: "Care and comfort in your home. Our mission is to ensure your well-being with excellent home care services.",
+                    footerLinks: "Navigation",
+                    footerContact: "Contacts",
+                    footerArea: "Braga District",
+                    footerFollow: "Follow Us",
+                    footerRights: "© 2025 Almalar - All rights reserved"
+                },
+                pt: {
+                    pageTitle: "Sobre Nós - Almalar",
+                    navAbout: "Sobre Nós",
+                    navServices: "Serviços",
+                    navTestimonials: "Testemunhos",
+                    navBlog: "Blog",
+                    navFaq: "FAQ",
+                    navContact: "Contacto",
+                    title: "A Nossa História",
+                    subtitle: "Cuidar é a nossa vocação.",
+                    p1: "A Almalar nasceu de uma ideia simples, mas poderosa: todos merecem envelhecer com dignidade, conforto e alegria, no lugar que mais amam - a sua casa. A nossa missão é proporcionar um cuidado de excelência que vai além do básico, focando-nos na qualidade de vida, na autonomia e no bem-estar emocional de cada pessoa que servimos.",
+                    p2: "Entendemos que cada família e cada situação é única. Por isso, não oferecemos soluções padronizadas. Em vez disso, trabalhamos consigo para criar um plano de cuidados totalmente personalizado, que respeita as rotinas, as preferências e as necessidades individuais. Queremos ser a extensão da sua família, uma presença de confiança que garante não só o apoio nas tarefas diárias, mas também companhia, carinho e segurança.",
+                    valuesTitle: "Os Nossos Valores",
+                    value1: "<strong>Empatia:</strong> Colocamo-nos sempre no lugar do outro, procurando entender e responder às suas necessidades emocionais e físicas.",
+                    value2: "<strong>Profissionalismo:</strong> A nossa equipa é composta por profissionais qualificados, experientes e dedicados, em formação contínua.",
+                    value3: "<strong>Dignidade:</strong> Respeitamos a individualidade, a privacidade e a história de cada cliente, tratando todos com a máxima dignidade.",
+                    value4: "<strong>Confiança:</strong> Construímos relações transparentes e honestas com as famílias, sendo um pilar de apoio em todos os momentos.",
+                    p3: "Acreditamos que o apoio domiciliário é a chave para um envelhecimento feliz e tranquilo. Estamos comprometidos em fazer a diferença na vida dos nossos clientes e das suas famílias, todos os dias.",
+                    footerAbout: "Sobre a Almalar",
+                    footerAboutText: "Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.",
+                    footerLinks: "Navegação",
+                    footerContact: "Contactos",
+                    footerArea: "Distrito de Braga",
+                    footerFollow: "Siga-nos",
+                    footerRights: "© 2025 Almalar - Todos os direitos reservados"
+                }
+            };
+
+            let currentLang = localStorage.getItem('language') || 'pt';
+
+            const langSwitcher = document.getElementById('lang-switcher');
+            const langSwitcherMobile = document.getElementById('lang-switcher-mobile');
+
+            function setLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('language', lang);
+                document.documentElement.lang = lang;
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.innerHTML = translations[lang][key];
+                    }
+                });
+                langSwitcher.textContent = lang === 'pt' ? 'EN' : 'PT';
+                if(langSwitcherMobile) {
+                    langSwitcherMobile.textContent = lang === 'pt' ? 'EN' : 'PT';
+                }
+            }
+
+            function toggleLanguage() {
+                const newLang = currentLang === 'pt' ? 'en' : 'pt';
+                setLanguage(newLang);
+            }
+
+            langSwitcher.addEventListener('click', toggleLanguage);
+            if(langSwitcherMobile) {
+                langSwitcherMobile.addEventListener('click', toggleLanguage);
+            }
+            
+            setLanguage(currentLang);
+        });
+    </script>
+</body>
+</html>
