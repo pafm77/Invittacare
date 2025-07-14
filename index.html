@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
 
     <script>
         tailwind.config = {
@@ -36,14 +36,13 @@
 
 <body class="bg-white text-verde-escuro">
 
-    <!-- =============================================== -->
-    <!-- Cabeçalho (Header)                              -->
-    <!-- =============================================== -->
+    <!-- Cabeçalho -->
     <header class="bg-white sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center py-3">
                 <a href="index.html" class="flex items-center">
-                    <img src="image.png" alt="Logotipo Almalar" style="height: 50px;">
+                    <!-- MODIFICADO: Logótipo com URL público e tamanho aumentado -->
+                    <img src="https://i.postimg.cc/0QLzVNMm/logotipo.png" alt="Logotipo Almalar" style="height: 80px;">
                 </a>
 
                 <nav class="hidden md:flex items-center space-x-6">
@@ -82,11 +81,7 @@
         </div>
     </header>
 
-    <!-- =============================================== -->
-    <!-- Conteúdo Principal (Main)                       -->
-    <!-- =============================================== -->
     <main>
-
         <section class="bg-verde-suave py-20 md:py-32">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-verde-escuro mb-4" data-i18n="heroTitle">Cuidado e Conforto no Seu Lar</h1>
@@ -166,12 +161,8 @@
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- =============================================== -->
-    <!-- Rodapé (Footer)                                 -->
-    <!-- =============================================== -->
     <footer class="bg-verde-escuro text-white py-10">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
@@ -307,12 +298,14 @@
                 }
             };
 
-            let currentLang = 'pt';
+            let currentLang = localStorage.getItem('language') || 'pt';
+
             const langSwitcher = document.getElementById('lang-switcher');
             const langSwitcherMobile = document.getElementById('lang-switcher-mobile');
 
             function setLanguage(lang) {
                 currentLang = lang;
+                localStorage.setItem('language', lang);
                 document.documentElement.lang = lang;
                 const elements = document.querySelectorAll('[data-i18n]');
                 elements.forEach(el => {
@@ -322,7 +315,9 @@
                     }
                 });
                 langSwitcher.textContent = lang === 'pt' ? 'EN' : 'PT';
-                langSwitcherMobile.textContent = lang === 'pt' ? 'EN' : 'PT';
+                if(langSwitcherMobile) {
+                    langSwitcherMobile.textContent = lang === 'pt' ? 'EN' : 'PT';
+                }
             }
 
             function toggleLanguage() {
@@ -331,9 +326,11 @@
             }
 
             langSwitcher.addEventListener('click', toggleLanguage);
-            langSwitcherMobile.addEventListener('click', toggleLanguage);
+            if(langSwitcherMobile) {
+                langSwitcherMobile.addEventListener('click', toggleLanguage);
+            }
             
-            setLanguage('pt');
+            setLanguage(currentLang);
         });
     </script>
 </body>
