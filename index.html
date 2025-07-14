@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="siteTitle">Almalar - Apoio Domiciliário</title>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Configuração de Cores e Estilos Personalizados -->
     <script>
         tailwind.config = {
             theme: {
@@ -33,43 +29,55 @@
     </script>
 
     <style>
-        /* Estilos adicionais para um look mais polido */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        #mobile-menu { transition: max-height 0.3s ease-in-out; }
     </style>
 </head>
 
 <body class="bg-white text-verde-escuro">
 
     <!-- =============================================== -->
-    <!-- Cabeçalho (Header) e Navegação (Navbar)         -->
+    <!-- Cabeçalho (Header)                              -->
     <!-- =============================================== -->
     <header class="bg-white sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <!-- Logotipo e Título -->
-            <a href="#" class="flex items-center space-x-3">
-                <!-- MODIFICADO: Corrigido para .png.
-                     Certifique-se que o ficheiro 'logotipo.png' está na mesma pasta que este ficheiro HTML. -->
-                <img src="logotipo.png" alt="Logotipo Almalar" style="height: 60px;">
-            </a>
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center py-3">
+                <a href="index.html" class="flex items-center">
+                    <img src="image.png" alt="Logotipo Almalar" style="height: 50px;">
+                </a>
 
-            <!-- Menu de Navegação para Desktop -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#servicos" class="text-verde-escuro hover:text-cinza-botao transition-colors duration-300" data-i18n="navServices">Serviços</a>
-                <a href="#testemunhos" class="text-verde-escuro hover:text-cinza-botao transition-colors duration-300" data-i18n="navTestimonials">Testemunhos</a>
-                <a href="#blog" class="text-verde-escuro hover:text-cinza-botao transition-colors duration-300" data-i18n="navBlog">Blog</a>
-                <a href="#contacto" class="text-verde-escuro hover:text-cinza-botao transition-colors duration-300" data-i18n="navContact">Contacto</a>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="sobre-nos.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navAbout">Sobre Nós</a>
+                    <a href="servicos.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navServices">Serviços</a>
+                    <a href="testemunhos.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navTestimonials">Testemunhos</a>
+                    <a href="blog.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navBlog">Blog</a>
+                    <a href="faq.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navFaq">FAQ</a>
+                    <a href="contacto.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navContact">Contacto</a>
+                </nav>
                 
-                <button id="lang-switcher" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro transition-colors duration-300">
-                    EN
-                </button>
-            </nav>
-            
-            <div class="md:hidden flex items-center space-x-4">
-                <button id="lang-switcher-mobile" class="bg-cinza-botao text-white px-3 py-1.5 rounded-md hover:bg-verde-escuro transition-colors duration-300 text-sm">
-                    EN
-                </button>
+                <div class="hidden md:flex items-center gap-4">
+                    <button id="lang-switcher" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro">EN</button>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-verde-escuro focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0">
+                <nav class="flex flex-col space-y-4 py-4 text-center">
+                    <a href="sobre-nos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navAbout">Sobre Nós</a>
+                    <a href="servicos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navServices">Serviços</a>
+                    <a href="testemunhos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navTestimonials">Testemunhos</a>
+                    <a href="blog.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navBlog">Blog</a>
+                    <a href="faq.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navFaq">FAQ</a>
+                    <a href="contacto.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navContact">Contacto</a>
+                    <div class="pt-4">
+                        <button id="lang-switcher-mobile" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro w-1/2 mx-auto">EN</button>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -82,256 +90,220 @@
         <section class="bg-verde-suave py-20 md:py-32">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-verde-escuro mb-4" data-i18n="heroTitle">Cuidado e Conforto no Seu Lar</h1>
-                <p class="text-lg md:text-xl text-verde-escuro max-w-3xl mx-auto" data-i18n="heroSubtitle">Oferecemos um leque completo de serviços de apoio domiciliário, pensados para garantir o seu bem-estar e o da sua família.</p>
+                <p class="text-lg md:text-xl text-verde-escuro max-w-3xl mx-auto" data-i18n="heroSubtitle">Oferecemos um leque completo de serviços de apoio domiciliário, pensados para garantir o seu bem-estar e o da sua família no distrito de Braga.</p>
+                <div class="mt-8">
+                    <a href="servicos.html" class="bg-cinza-botao text-white font-bold px-8 py-4 rounded-md hover:bg-verde-escuro transition-colors text-lg" data-i18n="heroCta">Conheça os Nossos Serviços</a>
+                </div>
             </div>
         </section>
 
-        <section id="servicos" class="py-20">
+        <section id="sobrenos" class="py-20">
+             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.pexels.com/photos/7551610/pexels-photo-7551610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="[Imagem de uma cuidadora a sorrir para uma idosa]" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="aboutTitle">A Nossa Missão: Cuidar da Sua Família como se Fosse a Nossa</h2>
+                    <p class="text-lg text-cinza-claro leading-relaxed mb-6" data-i18n="aboutText">A Almalar nasceu da convicção de que todos merecem envelhecer com dignidade e alegria. Queremos ser a extensão da sua família, garantindo que os seus entes queridos tenham a melhor qualidade de vida possível, sem saírem do conforto da sua casa.</p>
+                    <a href="sobre-nos.html" class="bg-verde-escuro text-white font-bold px-6 py-3 rounded-md hover:bg-cinza-botao transition-colors" data-i18n="aboutCta">Conheça a Nossa História</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos-preview" class="bg-verde-suave py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="servicesTitle">Os Nossos Serviços</h2>
-                
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="servicesTitle">Uma Solução Completa para Si</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    
-                    <!-- Serviço: Enfermagem -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <!-- MODIFICADO: Nova imagem de enfermagem -->
-                        <img src="https://images.pexels.com/photos/6703031/pexels-photo-6703031.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de uma enfermeira a preparar a medicação para um idoso]" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="serviceNursingTitle">Enfermagem</h3>
-                            <p class="text-cinza-claro" data-i18n="serviceNursingDesc">Disponibilizamos cuidados de enfermagem especializados, incluindo gestão de medicação, tratamento de feridas e monitorização de sinais vitais, por profissionais certificados.</p>
-                        </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-cinza-botao">
+                        <h3 class="text-2xl font-bold mb-2" data-i18n="serviceHealthTitle">Cuidados de Saúde</h3>
+                        <p class="text-cinza-claro" data-i18n="serviceHealthPreview">Serviços de enfermagem, fisioterapia e psicologia no conforto da sua casa.</p>
                     </div>
-
-                    <!-- Serviço: Psicologia -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de uma sessão de psicologia com uma pessoa idosa]" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="servicePsychologyTitle">Psicologia</h3>
-                            <p class="text-cinza-claro" data-i18n="servicePsychologyDesc">O nosso apoio psicológico ajuda a promover a saúde mental e o bem-estar emocional, com sessões individuais para lidar com ansiedade, depressão e transições de vida.</p>
-                        </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-cinza-botao">
+                        <h3 class="text-2xl font-bold mb-2" data-i18n="serviceWellnessTitle">Bem-Estar e Nutrição</h3>
+                        <p class="text-cinza-claro" data-i18n="serviceWellnessPreview">Planos de nutrição personalizados e apoio para um envelhecimento saudável.</p>
                     </div>
-
-                    <!-- Serviço: Fisioterapia -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <!-- MODIFICADO: Nova imagem de fisioterapia -->
-                        <img src="https://images.pexels.com/photos/8639739/pexels-photo-8639739.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de um fisioterapeuta a realizar exercícios com um paciente idoso]" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="servicePhysiotherapyTitle">Fisioterapia</h3>
-                            <p class="text-cinza-claro" data-i18n="servicePhysiotherapyDesc">Programas de reabilitação e fisioterapia personalizados para auxiliar na recuperação de lesões, melhorar a mobilidade e prevenir futuros problemas físicos, aumentando a qualidade de vida.</p>
-                        </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-cinza-botao">
+                        <h3 class="text-2xl font-bold mb-2" data-i18n="serviceDailySupportTitle">Apoio Diário</h3>
+                        <p class="text-cinza-claro" data-i18n="serviceDailySupportPreview">Ajuda com as tarefas domésticas, limpeza e companhia para o dia a dia.</p>
                     </div>
-
-                    <!-- MODIFICADO: Serviço de Nutrição -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://images.pexels.com/photos/6995133/pexels-photo-6995133.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de uma nutricionista a apresentar um plano alimentar a um casal de idosos]" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="serviceNutritionTitle">Nutrição</h3>
-                            <p class="text-cinza-claro" data-i18n="serviceNutritionDesc">Apoio nutricional focado nas necessidades da terceira idade, com planeamento de refeições equilibradas, saborosas e adaptadas a condições de saúde específicas.</p>
-                        </div>
-                    </div>
-
-                    <!-- Serviço: Limpeza -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://images.pexels.com/photos/4239147/pexels-photo-4239147.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de um serviço de limpeza profissional a arrumar uma casa]" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="serviceCleaningTitle">Limpeza Doméstica</h3>
-                            <p class="text-cinza-claro" data-i18n="serviceCleaningDesc">Os nossos serviços de limpeza e organização garantem que o seu lar se mantém um ambiente agradável, seguro e acolhedor, adaptado às suas necessidades.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Serviço: Apoio Domiciliário -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <!-- MODIFICADO: Nova imagem de apoio domiciliário -->
-                        <img src="https://images.pexels.com/photos/7148568/pexels-photo-7148568.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de uma auxiliar de geriatria a passar a ferro]" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="serviceSupportTitle">Apoio Domiciliário</h3>
-                            <p class="text-cinza-claro" data-i18n="serviceSupportDesc">Prestamos acompanhamento e ajuda nas tarefas diárias, como tratamento de roupas, compras, recados e companhia, promovendo a autonomia e um melhor dia a dia.</p>
-                        </div>
-                    </div>
-
+                </div>
+                <div class="text-center mt-12">
+                    <a href="servicos.html" class="text-verde-escuro font-bold hover:text-cinza-botao text-lg" data-i18n="seeAllServices">Ver todos os serviços &rarr;</a>
                 </div>
             </div>
         </section>
 
-        <section id="testemunhos" class="bg-verde-suave py-20">
+        <section id="testemunhos-preview" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="testimonialsTitle">Testemunhos</h2>
-                <div class="flex flex-wrap justify-center gap-10">
-                    
-                    <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
-                        <p class="text-cinza-claro italic mb-4" data-i18n="testimonial1Text">"O serviço de enfermagem foi excecional. Senti-me sempre segura e bem cuidada. Uma equipa muito profissional e humana."</p>
-                        <p class="text-verde-escuro font-bold text-right" data-i18n="testimonial1Author">- Maria Silva</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="testimonialsTitle">O Que Dizem os Nossos Clientes</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <p class="text-cinza-claro italic text-xl mb-4" data-i18n="testimonial1Text">"O serviço foi excecional. Senti-me sempre segura e bem cuidada. Uma equipa muito profissional e humana."</p>
+                        <p class="text-verde-escuro font-bold" data-i18n="testimonial1Author">- Maria Silva</p>
                     </div>
-
-                    <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
-                        <p class="text-cinza-claro italic mb-4" data-i18n="testimonial2Text">"A ajuda com a limpeza e as tarefas diárias foi uma bênção para os meus pais. Recomendo vivamente a Almalar a todos."</p>
-                        <p class="text-verde-escuro font-bold text-right" data-i18n="testimonial2Author">- João Costa</p>
-                    </div>
-
+                </div>
+                 <div class="text-center mt-8">
+                    <a href="testemunhos.html" class="text-verde-escuro font-bold hover:text-cinza-botao text-lg" data-i18n="seeAllTestimonials">Ver mais testemunhos &rarr;</a>
                 </div>
             </div>
         </section>
 
-        <section id="blog" class="py-20">
+        <section id="faq-preview" class="bg-verde-suave py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="blogTitle">Blog Informativo</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de um cérebro saudável]" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="post1Title">5 Dicas para Manter a Mente Ativa na Terceira Idade</h3>
-                            <p class="text-cinza-claro mb-4" data-i18n="post1Snippet">Descubra atividades e hábitos simples que ajudam a preservar a função cognitiva e a promover a saúde mental...</p>
-                            <a href="#" class="text-verde-escuro font-bold hover:text-cinza-botao" data-i18n="readMore">Ler Mais</a>
-                        </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="faqTitle">Perguntas Frequentes</h2>
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div>
+                        <h3 class="font-bold text-lg" data-i18n="faq1Question">Como funciona o processo de contratação?</h3>
+                        <p class="text-cinza-claro mt-1" data-i18n="faq1Answer">O processo começa com uma avaliação inicial gratuita para entendermos as suas necessidades. Depois, criamos um plano de cuidados personalizado e selecionamos o profissional mais adequado para si.</p>
                     </div>
-
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de uma casa segura e adaptada para idosos]" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="post2Title">Como Adaptar a Casa para Garantir a Segurança de Idosos</h3>
-                            <p class="text-cinza-claro mb-4" data-i18n="post2Snippet">Pequenas alterações em casa podem prevenir quedas e acidentes. Saiba por onde começar para criar um ambiente mais seguro...</p>
-                             <a href="#" class="text-verde-escuro font-bold hover:text-cinza-botao" data-i18n="readMore">Ler Mais</a>
-                        </div>
+                    <div>
+                        <h3 class="font-bold text-lg" data-i18n="faq2Question">Os serviços são ajustáveis?</h3>
+                        <p class="text-cinza-claro mt-1" data-i18n="faq2Answer">Sim. Todos os nossos planos são flexíveis e podem ser ajustados a qualquer momento para responder a novas necessidades ou alterações na rotina.</p>
                     </div>
-
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://images.pexels.com/photos/69434/pexels-photo-69434.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="[Imagem de alimentos saudáveis numa mesa]" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="post3Title">A Importância da Nutrição no Envelhecimento Saudável</h3>
-                            <p class="text-cinza-claro mb-4" data-i18n="post3Snippet">Uma dieta equilibrada é fundamental para a energia e saúde. Conheça os nutrientes essenciais e como incluí-los nas refeições...</p>
-                             <a href="#" class="text-verde-escuro font-bold hover:text-cinza-botao" data-i18n="readMore">Ler Mais</a>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="bg-verde-suave py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="contactTitle">Contacto</h2>
-                <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-                    <form id="contact-form">
-                        <div class="mb-6">
-                            <label for="name" class="block text-verde-escuro font-bold mb-2" data-i18n="formName">Nome</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-cinza-claro rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
-                        </div>
-                        <div class="mb-6">
-                            <label for="email" class="block text-verde-escuro font-bold mb-2" data-i18n="formEmail">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-cinza-claro rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-verde-escuro font-bold mb-2" data-i18n="formMessage">Mensagem</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-cinza-claro rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="bg-cinza-botao text-white font-bold px-8 py-3 rounded-md hover:bg-verde-escuro transition-colors duration-300" data-i18n="formSubmit">Enviar</button>
-                        </div>
-                    </form>
-                    <p id="form-feedback" class="text-center mt-4"></p>
+                <div class="text-center mt-12">
+                    <a href="faq.html" class="text-verde-escuro font-bold hover:text-cinza-botao text-lg" data-i18n="seeAllFaqs">Ver mais perguntas &rarr;</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-verde-escuro py-6">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-cinza-claro" data-i18n="footerText">© 2025 Almalar - Todos os direitos reservados</p>
+    <!-- =============================================== -->
+    <!-- Rodapé (Footer)                                 -->
+    <!-- =============================================== -->
+    <footer class="bg-verde-escuro text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="font-bold text-lg mb-4" data-i18n="footerAbout">Sobre a Almalar</h3>
+                    <p class="text-cinza-claro text-sm" data-i18n="footerAboutText">Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4" data-i18n="footerLinks">Navegação</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="sobre-nos.html" class="hover:text-cinza-botao" data-i18n="navAbout">Sobre Nós</a></li>
+                        <li><a href="servicos.html" class="hover:text-cinza-botao" data-i18n="navServices">Serviços</a></li>
+                        <li><a href="blog.html" class="hover:text-cinza-botao" data-i18n="navBlog">Blog</a></li>
+                        <li><a href="faq.html" class="hover:text-cinza-botao" data-i18n="navFaq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4" data-i18n="footerContact">Contactos</h3>
+                    <ul class="space-y-2 text-cinza-claro text-sm">
+                        <li class="flex items-center justify-center md:justify-start gap-2"><span data-i18n="footerArea">Distrito de Braga</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-2"><a href="tel:+351915471016" class="hover:text-cinza-botao">915 471 016</a></li>
+                        <li class="flex items-center justify-center md:justify-start gap-2"><a href="mailto:geral@almalar.pt" class="hover:text-cinza-botao">geral@almalar.pt</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="font-bold text-lg mb-4" data-i18n="footerFollow">Siga-nos</h3>
+                    <div class="flex space-x-4 justify-center md:justify-start">
+                        <a href="#" aria-label="Facebook" class="text-cinza-claro hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/></svg></a>
+                        <a href="#" aria-label="Instagram" class="text-cinza-claro hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.28-.059-1.688-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="text-cinza-claro text-sm" data-i18n="footerRights">© 2025 Almalar - Todos os direitos reservados</p>
+            </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            
-            // MODIFICADO: Traduções atualizadas para o serviço de Nutrição
+            // --- LÓGICA DO MENU MOBILE ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
+                    mobileMenu.style.maxHeight = '0px';
+                } else {
+                    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                }
+            });
+
+            // --- LÓGICA DE TRADUÇÃO ---
             const translations = {
                 en: {
                     siteTitle: "Almalar - Home Care Support",
+                    navAbout: "About Us",
                     navServices: "Services",
                     navTestimonials: "Testimonials",
                     navBlog: "Blog",
+                    navFaq: "FAQ",
                     navContact: "Contact",
                     heroTitle: "Care and Comfort in Your Home",
-                    heroSubtitle: "We offer a full range of home support services, designed to ensure your well-being and that of your family.",
-                    servicesTitle: "Our Services",
-                    serviceNursingTitle: "Nursing",
-                    serviceNursingDesc: "We provide specialized nursing care, including medication management, wound treatment, and vital signs monitoring, all performed by certified professionals.",
-                    servicePsychologyTitle: "Psychology",
-                    servicePsychologyDesc: "Our psychological support service helps promote mental health and emotional well-being, offering individual sessions to deal with anxiety, depression, and life transitions.",
-                    servicePhysiotherapyTitle: "Physiotherapy",
-                    servicePhysiotherapyDesc: "Customized rehabilitation and physiotherapy programs to aid in injury recovery, improve mobility, and prevent future physical issues, enhancing quality of life.",
-                    serviceNutritionTitle: "Nutrition",
-                    serviceNutritionDesc: "Nutritional support focused on the needs of the elderly, with planning of balanced, tasty meals adapted to specific health conditions.",
-                    serviceCleaningTitle: "House Cleaning",
-                    serviceCleaningDesc: "Our cleaning and organization services ensure your home remains a pleasant, safe, and welcoming environment, tailored to your specific needs.",
-                    serviceSupportTitle: "Home Support",
-                    serviceSupportDesc: "We provide daily support, including laundry care, grocery shopping, errands, and companionship, promoting autonomy and a better daily routine.",
-                    testimonialsTitle: "Testimonials",
-                    testimonial1Text: "\"The nursing service was exceptional. I always felt safe and well-cared for. A very professional and humane team.\"",
+                    heroSubtitle: "We offer a full range of home support services, designed to ensure your well-being and that of your family in the Braga district.",
+                    heroCta: "Discover Our Services",
+                    aboutTitle: "Our Mission: Caring for Your Family as if It Were Ours",
+                    aboutText: "Almalar was born from the conviction that everyone deserves to age with dignity and joy. We want to be an extension of your family, ensuring your loved ones have the best possible quality of life, without leaving the comfort of their home.",
+                    aboutCta: "Learn Our Story",
+                    servicesTitle: "A Complete Solution for You",
+                    serviceHealthTitle: "Health Care",
+                    serviceHealthPreview: "Nursing, physiotherapy, and psychology services in the comfort of your home.",
+                    serviceWellnessTitle: "Wellness & Nutrition",
+                    serviceWellnessPreview: "Personalized nutrition plans and support for healthy aging.",
+                    serviceDailySupportTitle: "Daily Support",
+                    serviceDailySupportPreview: "Help with household chores, cleaning, and companionship for daily life.",
+                    seeAllServices: "See all services &rarr;",
+                    testimonialsTitle: "What Our Clients Say",
+                    testimonial1Text: "\"The service was exceptional. I always felt safe and well-cared for. A very professional and humane team.\"",
                     testimonial1Author: "- Maria Silva",
-                    testimonial2Text: "\"The help with cleaning and daily tasks was a blessing for my parents. I highly recommend Almalar to everyone.\"",
-                    testimonial2Author: "- João Costa",
-                    blogTitle: "Informative Blog",
-                    post1Title: "5 Tips to Keep Your Mind Active in Old Age",
-                    post1Snippet: "Discover simple activities and habits that help preserve cognitive function and promote mental health...",
-                    post2Title: "How to Adapt Your Home to Ensure Seniors' Safety",
-                    post2Snippet: "Small changes at home can prevent falls and accidents. Learn where to start to create a safer environment...",
-                    post3Title: "The Importance of Nutrition in Healthy Aging",
-                    post3Snippet: "A balanced diet is key for energy and health. Learn about essential nutrients and how to include them in meals...",
-                    readMore: "Read More",
-                    contactTitle: "Contact",
-                    formName: "Name",
-                    formEmail: "Email",
-                    formMessage: "Message",
-                    formSubmit: "Send",
-                    formSuccess: "Message sent successfully! We will contact you soon.",
-                    formError: "An error occurred. Please try again later.",
-                    footerText: "© 2025 Almalar - All rights reserved"
+                    seeAllTestimonials: "See more testimonials &rarr;",
+                    faqTitle: "Frequently Asked Questions",
+                    faq1Question: "How does the hiring process work?",
+                    faq1Answer: "The process begins with a free initial assessment to understand your needs. Then, we create a personalized care plan and select the most suitable professional for you.",
+                    faq2Question: "Are the services adjustable?",
+                    faq2Answer: "Yes. All our plans are flexible and can be adjusted at any time to meet new needs or changes in routine.",
+                    seeAllFaqs: "See more questions &rarr;",
+                    footerAbout: "About Almalar",
+                    footerAboutText: "Care and comfort in your home. Our mission is to ensure your well-being with excellent home care services.",
+                    footerLinks: "Navigation",
+                    footerContact: "Contacts",
+                    footerArea: "Braga District",
+                    footerFollow: "Follow Us",
+                    footerRights: "© 2025 Almalar - All rights reserved"
                 },
                 pt: {
                     siteTitle: "Almalar - Apoio Domiciliário",
+                    navAbout: "Sobre Nós",
                     navServices: "Serviços",
                     navTestimonials: "Testemunhos",
                     navBlog: "Blog",
+                    navFaq: "FAQ",
                     navContact: "Contacto",
                     heroTitle: "Cuidado e Conforto no Seu Lar",
-                    heroSubtitle: "Oferecemos um leque completo de serviços de apoio domiciliário, pensados para garantir o seu bem-estar e o da sua família.",
-                    servicesTitle: "Os Nossos Serviços",
-                    serviceNursingTitle: "Enfermagem",
-                    serviceNursingDesc: "Disponibilizamos cuidados de enfermagem especializados, incluindo gestão de medicação, tratamento de feridas e monitorização de sinais vitais, por profissionais certificados.",
-                    servicePsychologyTitle: "Psicologia",
-                    servicePsychologyDesc: "O nosso apoio psicológico ajuda a promover a saúde mental e o bem-estar emocional, com sessões individuais para lidar com ansiedade, depressão e transições de vida.",
-                    servicePhysiotherapyTitle: "Fisioterapia",
-                    servicePhysiotherapyDesc: "Programas de reabilitação e fisioterapia personalizados para auxiliar na recuperação de lesões, melhorar a mobilidade e prevenir futuros problemas físicos, aumentando a qualidade de vida.",
-                    serviceNutritionTitle: "Nutrição",
-                    serviceNutritionDesc: "Apoio nutricional focado nas necessidades da terceira idade, com planeamento de refeições equilibradas, saborosas e adaptadas a condições de saúde específicas.",
-                    serviceCleaningTitle: "Limpeza Doméstica",
-                    serviceCleaningDesc: "Os nossos serviços de limpeza e organização garantem que o seu lar se mantém um ambiente agradável, seguro e acolhedor, adaptado às suas necessidades.",
-                    serviceSupportTitle: "Apoio Domiciliário",
-                    serviceSupportDesc: "Prestamos acompanhamento e ajuda nas tarefas diárias, como tratamento de roupas, compras, recados e companhia, promovendo a autonomia e um melhor dia a dia.",
-                    testimonialsTitle: "Testemunhos",
-                    testimonial1Text: "\"O serviço de enfermagem foi excecional. Senti-me sempre segura e bem cuidada. Uma equipa muito profissional e humana.\"",
+                    heroSubtitle: "Oferecemos um leque completo de serviços de apoio domiciliário, pensados para garantir o seu bem-estar e o da sua família no distrito de Braga.",
+                    heroCta: "Conheça os Nossos Serviços",
+                    aboutTitle: "A Nossa Missão: Cuidar da Sua Família como se Fosse a Nossa",
+                    aboutText: "A Almalar nasceu da convicção de que todos merecem envelhecer com dignidade e alegria. Queremos ser a extensão da sua família, garantindo que os seus entes queridos tenham a melhor qualidade de vida possível, sem saírem do conforto da sua casa.",
+                    aboutCta: "Conheça a Nossa História",
+                    servicesTitle: "Uma Solução Completa para Si",
+                    serviceHealthTitle: "Cuidados de Saúde",
+                    serviceHealthPreview: "Serviços de enfermagem, fisioterapia e psicologia no conforto da sua casa.",
+                    serviceWellnessTitle: "Bem-Estar e Nutrição",
+                    serviceWellnessPreview: "Planos de nutrição personalizados e apoio para um envelhecimento saudável.",
+                    serviceDailySupportTitle: "Apoio Diário",
+                    serviceDailySupportPreview: "Ajuda com as tarefas domésticas, limpeza e companhia para o dia a dia.",
+                    seeAllServices: "Ver todos os serviços &rarr;",
+                    testimonialsTitle: "O Que Dizem os Nossos Clientes",
+                    testimonial1Text: "\"O serviço foi excecional. Senti-me sempre segura e bem cuidada. Uma equipa muito profissional e humana.\"",
                     testimonial1Author: "- Maria Silva",
-                    testimonial2Text: "\"A ajuda com a limpeza e as tarefas diárias foi uma bênção para os meus pais. Recomendo vivamente a Almalar a todos.\"",
-                    testimonial2Author: "- João Costa",
-                    blogTitle: "Blog Informativo",
-                    post1Title: "5 Dicas para Manter a Mente Ativa na Terceira Idade",
-                    post1Snippet: "Descubra atividades e hábitos simples que ajudam a preservar a função cognitiva e a promover a saúde mental...",
-                    post2Title: "Como Adaptar a Casa para Garantir a Segurança de Idosos",
-                    post2Snippet: "Pequenas alterações em casa podem prevenir quedas e acidentes. Saiba por onde começar para criar um ambiente mais seguro...",
-                    post3Title: "A Importância da Nutrição no Envelhecimento Saudável",
-                    post3Snippet: "Uma dieta equilibrada é fundamental para a energia e saúde. Conheça os nutrientes essenciais e como incluí-los nas refeições...",
-                    readMore: "Ler Mais",
-                    contactTitle: "Contacto",
-                    formName: "Nome",
-                    formEmail: "Email",
-                    formMessage: "Mensagem",
-                    formSubmit: "Enviar",
-                    formSuccess: "Mensagem enviada com sucesso! Entraremos em contacto em breve.",
-                    formError: "Ocorreu um erro. Por favor, tente novamente mais tarde.",
-                    footerText: "© 2025 Almalar - Todos os direitos reservados"
+                    seeAllTestimonials: "Ver mais testemunhos &rarr;",
+                    faqTitle: "Perguntas Frequentes",
+                    faq1Question: "Como funciona o processo de contratação?",
+                    faq1Answer: "O processo começa com uma avaliação inicial gratuita para entendermos as suas necessidades. Depois, criamos um plano de cuidados personalizado e selecionamos o profissional mais adequado para si.",
+                    faq2Question: "Os serviços são ajustáveis?",
+                    faq2Answer: "Sim. Todos os nossos planos são flexíveis e podem ser ajustados a qualquer momento para responder a novas necessidades ou alterações na rotina.",
+                    seeAllFaqs: "Ver mais perguntas &rarr;",
+                    footerAbout: "Sobre a Almalar",
+                    footerAboutText: "Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.",
+                    footerLinks: "Navegação",
+                    footerContact: "Contactos",
+                    footerArea: "Distrito de Braga",
+                    footerFollow: "Siga-nos",
+                    footerRights: "© 2025 Almalar - Todos os direitos reservados"
                 }
             };
 
@@ -362,23 +334,6 @@
             langSwitcherMobile.addEventListener('click', toggleLanguage);
             
             setLanguage('pt');
-
-            const contactForm = document.getElementById('contact-form');
-            const formFeedback = document.getElementById('form-feedback');
-
-            contactForm.addEventListener('submit', function(event) {
-                event.preventDefault(); 
-                
-                formFeedback.textContent = translations[currentLang].formSuccess;
-                formFeedback.classList.remove('text-red-500');
-                formFeedback.classList.add('text-green-600');
-                
-                contactForm.reset(); 
-
-                setTimeout(() => {
-                    formFeedback.textContent = '';
-                }, 5000);
-            });
         });
     </script>
 </body>
