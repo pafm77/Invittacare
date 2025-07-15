@@ -7,15 +7,11 @@
     
     <meta name="description" content="Almalar oferece serviços de apoio domiciliário de excelência no distrito de Braga, incluindo enfermagem, fisioterapia, nutrição e mais. Cuidado e conforto no seu lar.">
     <meta name="keywords" content="apoio domiciliário, braga, enfermagem, fisioterapia, idosos, cuidado, lar">
-    
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://almalar-final-plus-m8ma.vercel.app/">
     <meta property="og:title" content="Almalar - Apoio Domiciliário no Conforto do Lar">
     <meta property="og:description" content="Serviços de apoio domiciliário de excelência no distrito de Braga. Cuidado, conforto e profissionalismo para a sua família.">
     <meta property="og:image" content="https://i.postimg.cc/0QLzVNMm/logotipo.png">
-
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://almalar-final-plus-m8ma.vercel.app/">
     <meta property="twitter:title" content="Almalar - Apoio Domiciliário no Conforto do Lar">
@@ -26,11 +22,11 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <script>
         tailwind.config = {
@@ -65,7 +61,6 @@
                 <a href="index.html" class="flex items-center">
                     <img src="https://i.postimg.cc/0QLzVNMm/logotipo.png" alt="Logotipo Almalar" style="height: 80px;">
                 </a>
-
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="sobre-nos.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navAbout">Sobre Nós</a>
                     <a href="servicos.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navServices">Serviços</a>
@@ -74,18 +69,15 @@
                     <a href="faq.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navFaq">FAQ</a>
                     <a href="contacto.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navContact">Contacto</a>
                 </nav>
-                
                 <div class="hidden md:flex items-center gap-4">
                     <button id="lang-switcher" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro">EN</button>
                 </div>
-                
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" class="text-verde-escuro focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                 </div>
             </div>
-
             <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0">
                 <nav class="flex flex-col space-y-4 py-4 text-center">
                     <a href="sobre-nos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navAbout">Sobre Nós</a>
@@ -114,7 +106,7 @@
         </section>
 
         <section id="sobrenos" class="py-20">
-             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12 reveal-section">
                 <div class="md:w-1/2">
                     <img src="https://images.pexels.com/photos/7551610/pexels-photo-7551610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="[Imagem de uma cuidadora a sorrir para uma idosa]" class="rounded-lg shadow-xl">
                 </div>
@@ -128,33 +120,48 @@
 
         <section id="servicos-preview" class="bg-verde-suave py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="servicesTitle">Uma Solução Completa para Si</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-section" data-i18n="servicesTitle">Uma Solução Completa para Si</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-cinza-botao">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-cinza-botao reveal-card">
                         <h3 class="text-2xl font-bold mb-2" data-i18n="serviceHealthTitle">Cuidados de Saúde</h3>
                         <p class="text-cinza-claro" data-i18n="serviceHealthPreview">Serviços de enfermagem, fisioterapia e psicologia no conforto da sua casa.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-cinza-botao">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-cinza-botao reveal-card">
                         <h3 class="text-2xl font-bold mb-2" data-i18n="serviceWellnessTitle">Bem-Estar e Nutrição</h3>
                         <p class="text-cinza-claro" data-i18n="serviceWellnessPreview">Planos de nutrição personalizados e apoio para um envelhecimento saudável.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-cinza-botao">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center border-t-4 border-cinza-botao reveal-card">
                         <h3 class="text-2xl font-bold mb-2" data-i18n="serviceDailySupportTitle">Apoio Diário</h3>
                         <p class="text-cinza-claro" data-i18n="serviceDailySupportPreview">Ajuda com as tarefas domésticas, limpeza e companhia para o dia a dia.</p>
                     </div>
                 </div>
-                <div class="text-center mt-12">
+                <div class="text-center mt-12 reveal-section">
                     <a href="servicos.html" class="text-verde-escuro font-bold hover:text-cinza-botao text-lg" data-i18n="seeAllServices">Ver todos os serviços &rarr;</a>
                 </div>
             </div>
         </section>
 
-        <section id="orcamento" class="py-20">
+        <section id="testemunhos-preview" class="py-20">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-2" data-i18n="quoteTitle">Peça o Seu Orçamento</h2>
-                <p class="text-lg text-center text-cinza-claro mb-12" data-i18n="quoteSubtitle">Receba uma proposta personalizada e sem compromisso.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-section" data-i18n="testimonialsTitle">O Que Dizem os Nossos Clientes</h2>
+                <div class="max-w-3xl mx-auto reveal-card">
+                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                        <p class="text-cinza-claro italic text-xl mb-4" data-i18n="testimonial1Text">"O serviço foi excecional. Senti-me sempre segura e bem cuidada. Uma equipa muito profissional e humana."</p>
+                        <p class="text-verde-escuro font-bold" data-i18n="testimonial1Author">- Maria Silva</p>
+                    </div>
+                </div>
+                 <div class="text-center mt-8 reveal-section">
+                    <a href="testemunhos.html" class="text-verde-escuro font-bold hover:text-cinza-botao text-lg" data-i18n="seeAllTestimonials">Ver mais testemunhos &rarr;</a>
+                </div>
+            </div>
+        </section>
 
-                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <section id="orcamento" class="bg-verde-suave py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-2 reveal-section" data-i18n="quoteTitle">Peça o Seu Orçamento</h2>
+                <p class="text-lg text-center text-cinza-claro mb-12 reveal-section" data-i18n="quoteSubtitle">Receba uma proposta personalizada e sem compromisso.</p>
+
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg reveal-card">
                     <form action="https://formspree.io/f/SUBUSTITUIR_PELO_SEU_URL" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -454,6 +461,19 @@
                 localStorage.setItem('cookies_accepted', 'true');
                 cookieBanner.classList.add('hidden');
             });
+            
+            // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
+            const sr = ScrollReveal({
+                origin: 'bottom',
+                distance: '50px',
+                duration: 800,
+                delay: 200,
+                easing: 'ease-in-out',
+                reset: false
+            });
+
+            sr.reveal('.reveal-section');
+            sr.reveal('.reveal-card', { interval: 150 });
         });
     </script>
 </body>
