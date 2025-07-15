@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="pageTitle">Trabalha Connosco - Almalar</title>
+
+    <meta name="description" content="Junte-se à equipa da Almalar. Procuramos profissionais dedicados para os nossos serviços de apoio domiciliário no distrito de Braga. Envie a sua candidatura.">
+    <meta property="og:title" content="Trabalha Connosco - Almalar">
+    <meta property="og:description" content="Junte-se à equipa da Almalar. Procuramos profissionais dedicados para os nossos serviços de apoio domiciliário no distrito de Braga. Envie a sua candidatura.">
+    <meta property="og:url" content="https://almalar-final-plus-m8ma.vercel.app/trabalha-connosco.html">
+    <meta property="og:image" content="https://i.postimg.cc/0QLzVNMm/logotipo.png">
+    <meta property="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com/3.4.1?plugins=typography"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <script>
         tailwind.config = {
@@ -81,7 +93,7 @@
 
         <div class="py-20">
             <div class="container mx-auto px-6">
-                <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border-t-4 border-cinza-botao">
+                <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border-t-4 border-cinza-botao reveal-card">
                     <p class="text-cinza-claro mb-8" data-i18n="formIntro">Procuramos profissionais apaixonados e dedicados que partilhem os nossos valores de empatia, profissionalismo e dignidade. Se acredita que pode contribuir para a nossa missão, preencha o formulário abaixo.</p>
                     
                     <form action="https://formspree.io/f/geral@almalar.pt" method="POST">
@@ -255,6 +267,18 @@
             }
             
             setLanguage(currentLang);
+
+            // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
+            const sr = ScrollReveal({
+                origin: 'bottom',
+                distance: '50px',
+                duration: 800,
+                delay: 200,
+                easing: 'ease-in-out',
+                reset: false
+            });
+
+            sr.reveal('.reveal-card');
         });
     </script>
 </body>
