@@ -52,7 +52,10 @@
             }
         }
     </script>
-    <style> body { font-family: 'Inter', sans-serif; } #mobile-menu { transition: max-height 0.3s ease-in-out; } </style>
+    <style> 
+        body { font-family: 'Inter', sans-serif; } 
+        #mobile-menu { transition: max-height 0.3s ease-in-out; } 
+    </style>
 </head>
 <body class="bg-white text-verde-escuro">
 
@@ -64,7 +67,17 @@
                     <img src="https://i.postimg.cc/0QLzVNMm/logotipo.png" alt="Logotipo Almalar" style="height: 80px;">
                 </a>
                 <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="sobre-nos.html" class="text-verde-escuro font-bold hover:text-cinza-botao transition-colors" data-i18n="navAbout">Sobre Nós</a>
+                    <div class="relative group">
+                        <a href="sobre-nos.html" class="flex items-center text-verde-escuro font-bold hover:text-cinza-botao transition-colors" data-i18n="navAbout">
+                            Sobre Nós
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-50">
+                            <a href="sobre-nos.html#historia" class="block px-4 py-2 text-sm text-verde-escuro hover:bg-verde-suave" data-i18n="navOurStory">A Nossa História</a>
+                            <a href="sobre-nos.html#equipa" class="block px-4 py-2 text-sm text-verde-escuro hover:bg-verde-suave" data-i18n="navOurTeam">A Nossa Equipa</a>
+                            <a href="sobre-nos.html#atuacao" class="block px-4 py-2 text-sm text-verde-escuro hover:bg-verde-suave" data-i18n="navArea">Zona de Atuação</a>
+                        </div>
+                    </div>
                     <a href="servicos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navServices">Serviços</a>
                     <a href="blog.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navBlog">Blog</a>
                     <a href="trabalha-connosco.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navWorkWithUs">Trabalha Connosco</a>
@@ -99,18 +112,17 @@
     <main>
         <div class="bg-verde-suave py-16">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-verde-escuro" data-i18n="title">A Nossa História</h1>
+                <h1 class="text-4xl md:text-5xl font-bold text-verde-escuro" data-i18n="title">Sobre Nós</h1>
                 <p class="text-lg text-verde-escuro mt-2" data-i18n="subtitle">Cuidar é a nossa vocação.</p>
             </div>
         </div>
 
-        <div class="py-20">
+        <div id="historia" class="py-20 scroll-mt-24">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="prose lg:prose-xl max-w-none text-verde-escuro reveal-section">
+                    <h2 data-i18n="storyTitle">A Nossa História</h2>
                     <p class="lead text-xl" data-i18n="p1">A Almalar nasceu de uma ideia simples, mas poderosa: todos merecem envelhecer com dignidade, conforto e alegria, no lugar que mais amam - a sua casa. A nossa missão é proporcionar um cuidado de excelência que vai além do básico, focando-nos na qualidade de vida, na autonomia e no bem-estar emocional de cada pessoa que servimos.</p>
-                    
                     <p data-i18n="p2">Entendemos que cada família e cada situação é única. Por isso, não oferecemos soluções padronizadas. Em vez disso, trabalhamos consigo para criar um plano de cuidados totalmente personalizado, que respeita as rotinas, as preferências e as necessidades individuais. Queremos ser a extensão da sua família, uma presença de confiança que garante não só o apoio nas tarefas diárias, mas também companhia, carinho e segurança.</p>
-
                     <h2 data-i18n="valuesTitle">Os Nossos Valores</h2>
                     <ul>
                         <li data-i18n="value1"><strong>Empatia:</strong> Colocamo-nos sempre no lugar do outro, procurando entender e responder às suas necessidades emocionais e físicas.</li>
@@ -118,11 +130,46 @@
                         <li data-i18n="value3"><strong>Dignidade:</strong> Respeitamos a individualidade, a privacidade e a história de cada cliente, tratando todos com a máxima dignidade.</li>
                         <li data-i18n="value4"><strong>Confiança:</strong> Construímos relações transparentes e honestas com as famílias, sendo um pilar de apoio em todos os momentos.</li>
                     </ul>
-
                     <p data-i18n="p3">Acreditamos que o apoio domiciliário é a chave para um envelhecimento feliz e tranquilo. Estamos comprometidos em fazer a diferença na vida dos nossos clientes e das suas famílias, todos os dias.</p>
                 </div>
             </div>
         </div>
+        
+        <section id="equipa" class="bg-verde-suave py-20 scroll-mt-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal-section" data-i18n="teamTitle">A Nossa Equipa</h2>
+                    <p class="text-lg text-cinza-claro mb-12 reveal-section" data-i18n="teamSubtitle">Os rostos por trás do nosso cuidado.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                    <div class="text-center reveal-card">
+                        <img src="https://placehold.co/400x400/2C4E4B/FFFFFF?text=Sofia" alt="[Fotografia da fundadora Sofia Alves]" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-2xl font-bold" data-i18n="teamMember1Name">Sofia Alves</h3>
+                        <p class="text-cinza-botao font-semibold mb-2" data-i18n="teamMember1Role">Fundadora & CEO</p>
+                        <p class="text-cinza-claro" data-i18n="teamMember1Bio">Com mais de 15 anos de experiência em cuidados de saúde, a Sofia fundou a Almalar com a missão de oferecer um serviço de apoio domiciliário mais humano e personalizado.</p>
+                    </div>
+                    <div class="text-center reveal-card">
+                        <img src="https://placehold.co/400x400/839E94/FFFFFF?text=Rui" alt="[Fotografia do enfermeiro Rui Costa]" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg">
+                        <h3 class="text-2xl font-bold" data-i18n="teamMember2Name">Rui Costa</h3>
+                        <p class="text-cinza-botao font-semibold mb-2" data-i18n="teamMember2Role">Enfermeiro Coordenador</p>
+                        <p class="text-cinza-claro" data-i18n="teamMember2Bio">O Rui é responsável por toda a equipa de enfermagem, garantindo que os mais altos padrões de qualidade e segurança são cumpridos em cada visita.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="atuacao" class="py-20 scroll-mt-24">
+            <div class="container mx-auto px-6">
+                 <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal-section" data-i18n="areaTitle">A Nossa Zona de Atuação</h2>
+                    <p class="text-lg text-cinza-claro mb-12 reveal-section" data-i18n="areaText">Prestamos serviços em todo o distrito de Braga. O mapa abaixo ilustra a nossa principal área de cobertura.</p>
+                </div>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-lg overflow-hidden reveal-card">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191496.29119992857!2d-8.68213191984252!3d41.54544857924982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2457634621b339%3A0x400ebbde49038d0!2sBraga%2C%20Portugal!5e0!3m2!1spt-PT!2spt!4v1689450000000!5m2!1spt-PT!2spt" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Rodapé -->
@@ -189,8 +236,12 @@
                     navWorkWithUs: "Work With Us",
                     navFaq: "FAQ",
                     navContact: "Contact",
-                    title: "Our Story",
+                    navOurStory: "Our Story",
+                    navOurTeam: "Our Team",
+                    navArea: "Area of Operation",
+                    title: "About Us",
                     subtitle: "Caring is our calling.",
+                    storyTitle: "Our Story",
                     p1: "Almalar was born from a simple yet powerful idea: everyone deserves to age with dignity, comfort, and joy, in the place they love most - their home. Our mission is to provide excellent care that goes beyond the basics, focusing on quality of life, autonomy, and the emotional well-being of every person we serve.",
                     p2: "We understand that every family and every situation is unique. That's why we don't offer standardized solutions. Instead, we work with you to create a fully personalized care plan that respects routines, preferences, and individual needs. We want to be an extension of your family, a trusted presence that ensures not only support with daily tasks but also companionship, affection, and security.",
                     valuesTitle: "Our Values",
@@ -199,6 +250,16 @@
                     value3: "<strong>Dignity:</strong> We respect the individuality, privacy, and history of each client, treating everyone with the utmost dignity.",
                     value4: "<strong>Trust:</strong> We build transparent and honest relationships with families, serving as a pillar of support at all times.",
                     p3: "We believe that home care is the key to a happy and peaceful aging process. We are committed to making a difference in the lives of our clients and their families, every day.",
+                    teamTitle: "Our Team",
+                    teamSubtitle: "The faces behind our care.",
+                    teamMember1Name: "Sofia Alves",
+                    teamMember1Role: "Founder & CEO",
+                    teamMember1Bio: "With over 15 years of experience in healthcare, Sofia founded Almalar with a mission to offer a more humane and personalized home care service.",
+                    teamMember2Name: "Rui Costa",
+                    teamMember2Role: "Coordinating Nurse",
+                    teamMember2Bio: "Rui is responsible for the entire nursing team, ensuring the highest standards of quality and safety are met on every visit.",
+                    areaTitle: "Our Area of Operation",
+                    areaText: "We provide services throughout the district of Braga. The map below illustrates our main coverage area.",
                     footerAbout: "About Almalar",
                     footerAboutText: "Care and comfort in your home. Our mission is to ensure your well-being with excellent home care services.",
                     footerLinks: "Navigation",
@@ -216,8 +277,12 @@
                     navWorkWithUs: "Trabalha Connosco",
                     navFaq: "FAQ",
                     navContact: "Contacto",
-                    title: "A Nossa História",
+                    navOurStory: "A Nossa História",
+                    navOurTeam: "A Nossa Equipa",
+                    navArea: "Zona de Atuação",
+                    title: "Sobre Nós",
                     subtitle: "Cuidar é a nossa vocação.",
+                    storyTitle: "A Nossa História",
                     p1: "A Almalar nasceu de uma ideia simples, mas poderosa: todos merecem envelhecer com dignidade, conforto e alegria, no lugar que mais amam - a sua casa. A nossa missão é proporcionar um cuidado de excelência que vai além do básico, focando-nos na qualidade de vida, na autonomia e no bem-estar emocional de cada pessoa que servimos.",
                     p2: "Entendemos que cada família e cada situação é única. Por isso, não oferecemos soluções padronizadas. Em vez disso, trabalhamos consigo para criar um plano de cuidados totalmente personalizado, que respeita as rotinas, as preferências e as necessidades individuais. Queremos ser a extensão da sua família, uma presença de confiança que garante não só o apoio nas tarefas diárias, mas também companhia, carinho e segurança.",
                     valuesTitle: "Os Nossos Valores",
@@ -226,6 +291,16 @@
                     value3: "<strong>Dignidade:</strong> Respeitamos a individualidade, a privacidade e a história de cada cliente, tratando todos com a máxima dignidade.",
                     value4: "<strong>Confiança:</strong> Construímos relações transparentes e honestas com as famílias, sendo um pilar de apoio em todos os momentos.",
                     p3: "Acreditamos que o apoio domiciliário é a chave para um envelhecimento feliz e tranquilo. Estamos comprometidos em fazer a diferença na vida dos nossos clientes e das suas famílias, todos os dias.",
+                    teamTitle: "A Nossa Equipa",
+                    teamSubtitle: "Os rostos por trás do nosso cuidado.",
+                    teamMember1Name: "Sofia Alves",
+                    teamMember1Role: "Fundadora & CEO",
+                    teamMember1Bio: "Com mais de 15 anos de experiência em cuidados de saúde, a Sofia fundou a Almalar com a missão de oferecer um serviço de apoio domiciliário mais humano e personalizado.",
+                    teamMember2Name: "Rui Costa",
+                    teamMember2Role: "Enfermeiro Coordenador",
+                    teamMember2Bio: "O Rui é responsável por toda a equipa de enfermagem, garantindo que os mais altos padrões de qualidade e segurança são cumpridos em cada visita.",
+                    areaTitle: "A Nossa Zona de Atuação",
+                    areaText: "Prestamos serviços em todo o distrito de Braga. O mapa abaixo ilustra a nossa principal área de cobertura.",
                     footerAbout: "Sobre a Almalar",
                     footerAboutText: "Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.",
                     footerLinks: "Navegação",
@@ -270,7 +345,6 @@
             
             setLanguage(currentLang);
 
-            // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
             const sr = ScrollReveal({
                 origin: 'bottom',
                 distance: '50px',
@@ -281,6 +355,7 @@
             });
 
             sr.reveal('.reveal-section');
+            sr.reveal('.reveal-card', { interval: 150 });
         });
     </script>
 </body>
