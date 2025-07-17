@@ -7,11 +7,13 @@
     
     <meta name="description" content="Almalar oferece serviços de apoio domiciliário de excelência no distrito de Braga, incluindo enfermagem, fisioterapia, nutrição e mais. Cuidado e conforto no seu lar.">
     <meta name="keywords" content="apoio domiciliário, braga, enfermagem, fisioterapia, idosos, cuidado, lar">
+    
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://almalar-final-plus-m8ma.vercel.app/">
     <meta property="og:title" content="Almalar - Apoio Domiciliário no Conforto do Lar">
     <meta property="og:description" content="Serviços de apoio domiciliário de excelência no distrito de Braga. Cuidado, conforto e profissionalismo para a sua família.">
     <meta property="og:image" content="https://i.postimg.cc/0QLzVNMm/logotipo.png">
+
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://almalar-final-plus-m8ma.vercel.app/">
     <meta property="twitter:title" content="Almalar - Apoio Domiciliário no Conforto do Lar">
@@ -21,6 +23,7 @@
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,6 +64,7 @@
                 <a href="index.html" class="flex items-center">
                     <img src="https://i.postimg.cc/0QLzVNMm/logotipo.png" alt="Logotipo Almalar" style="height: 80px;">
                 </a>
+
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="sobre-nos.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navAbout">Sobre Nós</a>
                     <a href="servicos.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navServices">Serviços</a>
@@ -69,15 +73,18 @@
                     <a href="faq.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navFaq">FAQ</a>
                     <a href="contacto.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navContact">Contacto</a>
                 </nav>
+                
                 <div class="hidden md:flex items-center gap-4">
                     <button id="lang-switcher" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro">EN</button>
                 </div>
+                
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" class="text-verde-escuro focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                 </div>
             </div>
+
             <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0">
                 <nav class="flex flex-col space-y-4 py-4 text-center">
                     <a href="sobre-nos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navAbout">Sobre Nós</a>
@@ -141,22 +148,7 @@
             </div>
         </section>
 
-        <section id="testemunhos-preview" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-section" data-i18n="testimonialsTitle">O Que Dizem os Nossos Clientes</h2>
-                <div class="max-w-3xl mx-auto reveal-card">
-                    <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                        <p class="text-cinza-claro italic text-xl mb-4" data-i18n="testimonial1Text">"O serviço foi excecional. Senti-me sempre segura e bem cuidada. Uma equipa muito profissional e humana."</p>
-                        <p class="text-verde-escuro font-bold" data-i18n="testimonial1Author">- Maria Silva</p>
-                    </div>
-                </div>
-                 <div class="text-center mt-8 reveal-section">
-                    <a href="testemunhos.html" class="text-verde-escuro font-bold hover:text-cinza-botao text-lg" data-i18n="seeAllTestimonials">Ver mais testemunhos &rarr;</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="orcamento" class="bg-verde-suave py-20">
+        <section id="orcamento" class="py-20">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-2 reveal-section" data-i18n="quoteTitle">Peça o Seu Orçamento</h2>
                 <p class="text-lg text-center text-cinza-claro mb-12 reveal-section" data-i18n="quoteSubtitle">Receba uma proposta personalizada e sem compromisso.</p>
@@ -298,6 +290,9 @@
                     navWorkWithUs: "Work With Us",
                     navFaq: "FAQ",
                     navContact: "Contact",
+                    navOurStory: "Our Story",
+                    navOurTeam: "Our Team",
+                    navArea: "Area of Operation",
                     heroTitle: "Care and Comfort in Your Home",
                     heroSubtitle: "We offer a full range of home support services, designed to ensure your well-being and that of your family in the Braga district.",
                     heroCta: "Discover Our Services",
@@ -316,12 +311,6 @@
                     testimonial1Text: "\"The service was exceptional. I always felt safe and well-cared for. A very professional and humane team.\"",
                     testimonial1Author: "- Maria Silva",
                     seeAllTestimonials: "See more testimonials &rarr;",
-                    faqTitle: "Frequently Asked Questions",
-                    faq1Question: "How does the hiring process work?",
-                    faq1Answer: "The process begins with a free initial assessment to understand your needs. Then, we create a personalized care plan and select the most suitable professional for you.",
-                    faq2Question: "Are the services adjustable?",
-                    faq2Answer: "Yes. All our plans are flexible and can be adjusted at any time to meet new needs or changes in routine.",
-                    seeAllFaqs: "See more questions &rarr;",
                     quoteTitle: "Request Your Quote",
                     quoteSubtitle: "Receive a personalized, no-obligation proposal.",
                     formFirstName: "First Name",
@@ -360,6 +349,9 @@
                     navWorkWithUs: "Trabalha Connosco",
                     navFaq: "FAQ",
                     navContact: "Contacto",
+                    navOurStory: "A Nossa História",
+                    navOurTeam: "A Nossa Equipa",
+                    navArea: "Zona de Atuação",
                     heroTitle: "Cuidado e Conforto no Seu Lar",
                     heroSubtitle: "Oferecemos um leque completo de serviços de apoio domiciliário, pensados para garantir o seu bem-estar e o da sua família no distrito de Braga.",
                     heroCta: "Conheça os Nossos Serviços",
@@ -378,12 +370,6 @@
                     testimonial1Text: "\"O serviço foi excecional. Senti-me sempre segura e bem cuidada. Uma equipa muito profissional e humana.\"",
                     testimonial1Author: "- Maria Silva",
                     seeAllTestimonials: "Ver mais testemunhos &rarr;",
-                    faqTitle: "Perguntas Frequentes",
-                    faq1Question: "Como funciona o processo de contratação?",
-                    faq1Answer: "O processo começa com uma avaliação inicial gratuita para entendermos as suas necessidades. Depois, criamos um plano de cuidados personalizado e selecionamos o profissional mais adequado para si.",
-                    faq2Question: "Os serviços são ajustáveis?",
-                    faq2Answer: "Sim. Todos os nossos planos são flexíveis e podem ser ajustados a qualquer momento para responder a novas necessidades ou alterações na rotina.",
-                    seeAllFaqs: "Ver mais perguntas &rarr;",
                     quoteTitle: "Peça o Seu Orçamento",
                     quoteSubtitle: "Receba uma proposta personalizada e sem compromisso.",
                     formFirstName: "Nome",
