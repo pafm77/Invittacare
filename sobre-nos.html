@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="pageTitle">Sobre Nós - Almalar</title>
+    <title>Sobre Nós - Almalar</title>
     
     <meta name="description" content="Conheça a história, a missão e os valores da Almalar. Somos uma equipa dedicada a fornecer cuidados domiciliários com empatia, profissionalismo e dignidade.">
     <meta property="og:title" content="Sobre Nós - Almalar">
@@ -67,15 +67,14 @@
                     <img src="https://i.postimg.cc/0QLzVNMm/logotipo.png" alt="Logotipo Almalar" style="height: 80px;">
                 </a>
                 <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="sobre-nos.html" class="text-verde-escuro font-bold hover:text-cinza-botao transition-colors" data-i18n="navAbout">Sobre Nós</a>
-                    <a href="servicos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navServices">Serviços</a>
-                    <a href="testemunhos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navTestimonials">Testemunhos</a>
-                    <a href="trabalha-connosco.html" class="text-verde-escuro hover:text-cinza-botao" data-i18n="navWorkWithUs">Trabalha Connosco</a>
-                    <a href="blog.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navBlog">Blog</a>
-                    <a href="contacto.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navContact">Contacto</a>
+                    <a href="sobre-nos.html" class="text-verde-escuro font-bold hover:text-cinza-botao transition-colors">Sobre Nós</a>
+                    <a href="servicos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors">Serviços</a>
+                    <a href="trabalha-connosco.html" class="text-verde-escuro hover:text-cinza-botao">Trabalha Connosco</a>
+                    <a href="blog.html" class="text-verde-escuro hover:text-cinza-botao transition-colors">Blog</a>
+                    <a href="contacto.html" class="text-verde-escuro hover:text-cinza-botao transition-colors">Contacto</a>
                 </nav>
                 <div class="hidden md:flex items-center gap-4">
-                    <button id="lang-switcher" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro">EN</button>
+                    <a href="orcamento.html" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro transition-colors">Pedir Orçamento</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" class="text-verde-escuro focus:outline-none">
@@ -85,14 +84,13 @@
             </div>
             <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0">
                 <nav class="flex flex-col space-y-4 py-4 text-center">
-                    <a href="sobre-nos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navAbout">Sobre Nós</a>
-                    <a href="servicos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navServices">Serviços</a>
-                    <a href="testemunhos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navTestimonials">Testemunhos</a>
-                    <a href="trabalha-connosco.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navWorkWithUs">Trabalha Connosco</a>
-                    <a href="blog.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navBlog">Blog</a>
-                    <a href="contacto.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navContact">Contacto</a>
+                    <a href="sobre-nos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2">Sobre Nós</a>
+                    <a href="servicos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2">Serviços</a>
+                    <a href="trabalha-connosco.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2">Trabalha Connosco</a>
+                    <a href="blog.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2">Blog</a>
+                    <a href="contacto.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2">Contacto</a>
                     <div class="pt-4">
-                        <button id="lang-switcher-mobile" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro w-1/2 mx-auto">EN</button>
+                        <a href="orcamento.html" class="bg-cinza-botao text-white px-6 py-3 rounded-md hover:bg-verde-escuro transition-colors w-2/3 mx-auto">Pedir Orçamento</a>
                     </div>
                 </nav>
             </div>
@@ -102,62 +100,29 @@
     <main>
         <div class="bg-verde-suave py-16">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-verde-escuro" data-i18n="title">Sobre Nós</h1>
-                <p class="text-lg text-verde-escuro mt-2" data-i18n="subtitle">Cuidar é a nossa vocação.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-verde-escuro">Sobre Nós</h1>
+                <p class="text-lg text-verde-escuro mt-2">Cuidar é a nossa vocação.</p>
             </div>
         </div>
 
         <div id="historia" class="py-20 scroll-mt-24">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="prose lg:prose-xl max-w-none text-verde-escuro reveal-section">
-                    <h2 data-i18n="storyTitle">A Nossa História</h2>
-                    <p class="lead text-xl" data-i18n="p1">A Almalar nasceu de uma ideia simples, mas poderosa: todos merecem envelhecer com dignidade, conforto e alegria, no lugar que mais amam - a sua casa. A nossa missão é proporcionar um cuidado de excelência que vai além do básico, focando-nos na qualidade de vida, na autonomia e no bem-estar emocional de cada pessoa que servimos.</p>
-                    <p data-i18n="p2">Entendemos que cada família e cada situação é única. Por isso, não oferecemos soluções padronizadas. Em vez disso, trabalhamos consigo para criar um plano de cuidados totalmente personalizado, que respeita as rotinas, as preferências e as necessidades individuais. Queremos ser a extensão da sua família, uma presença de confiança que garante não só o apoio nas tarefas diárias, mas também companhia, carinho e segurança.</p>
-                    <h2 data-i18n="valuesTitle">Os Nossos Valores</h2>
+                    <h2>A Nossa História</h2>
+                    <p class="lead text-xl">Somos dois jovens empreendedores que partilham uma visão comum: a de que o cuidado na terceira idade pode e deve ser mais humano, mais próximo e mais digno. A Almalar nasceu da nossa experiência pessoal e da vontade de criar um serviço que gostaríamos que a nossa própria família recebesse.</p>
+                    <p>Crescemos a ver a importância dos laços familiares e do conforto do lar. Vimos de perto os desafios que as famílias enfrentam quando um ente querido começa a precisar de apoio. Foi essa vivência que nos motivou a construir um projeto diferente, focado não apenas em prestar serviços, mas em construir relações de confiança e em ser uma verdadeira extensão da família.</p>
+                    <p>A nossa missão é simples: garantir que todos possam envelhecer com a máxima qualidade de vida, segurança e alegria, no lugar que mais amam – a sua casa. Cada plano de cuidados que desenhamos é único, porque cada pessoa é única. Ouvimos, planeamos e cuidamos com o profissionalismo de uma equipa certificada e o carinho de quem realmente se importa.</p>
+                    
+                    <h2>Os Nossos Valores</h2>
                     <ul>
-                        <li data-i18n="value1"><strong>Empatia:</strong> Colocamo-nos sempre no lugar do outro, procurando entender e responder às suas necessidades emocionais e físicas.</li>
-                        <li data-i18n="value2"><strong>Profissionalismo:</strong> A nossa equipa é composta por profissionais qualificados, experientes e dedicados, em formação contínua.</li>
-                        <li data-i18n="value3"><strong>Dignidade:</strong> Respeitamos a individualidade, a privacidade e a história de cada cliente, tratando todos com a máxima dignidade.</li>
-                        <li data-i18n="value4"><strong>Confiança:</strong> Construímos relações transparentes e honestas com as famílias, sendo um pilar de apoio em todos os momentos.</li>
+                        <li><strong>Empatia:</strong> Colocamo-nos sempre no lugar do outro, procurando entender e responder às suas necessidades emocionais e físicas.</li>
+                        <li><strong>Profissionalismo:</strong> A nossa equipa é composta por profissionais qualificados, experientes e dedicados, em formação contínua.</li>
+                        <li><strong>Dignidade:</strong> Respeitamos a individualidade, a privacidade e a história de cada cliente, tratando todos com a máxima dignidade.</li>
+                        <li><strong>Confiança:</strong> Construímos relações transparentes e honestas com as famílias, sendo um pilar de apoio em todos os momentos.</li>
                     </ul>
-                    <p data-i18n="p3">Acreditamos que o apoio domiciliário é a chave para um envelhecimento feliz e tranquilo. Estamos comprometidos em fazer a diferença na vida dos nossos clientes e das suas famílias, todos os dias.</p>
                 </div>
             </div>
         </div>
-        
-        <section id="equipa" class="bg-verde-suave py-20 scroll-mt-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal-section" data-i18n="teamTitle">A Nossa Equipa</h2>
-                    <p class="text-lg text-cinza-claro mb-12 reveal-section" data-i18n="teamSubtitle">Os rostos por trás do nosso cuidado.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                    <div class="text-center reveal-card">
-                        <img src="https://placehold.co/400x400/2C4E4B/FFFFFF?text=Daniela" alt="[Fotografia da fundadora Daniela Abreu]" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg">
-                        <h3 class="text-2xl font-bold" data-i18n="teamMember1Name">Daniela Abreu</h3>
-                        <p class="text-cinza-botao font-semibold mb-2" data-i18n="teamMember1Role">Fundadora & CEO</p>
-                    </div>
-                    <div class="text-center reveal-card">
-                        <img src="https://placehold.co/400x400/839E94/FFFFFF?text=Pedro" alt="[Fotografia do fundador Pedro Machado]" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg">
-                        <h3 class="text-2xl font-bold" data-i18n="teamMember2Name">Pedro Machado</h3>
-                        <p class="text-cinza-botao font-semibold mb-2" data-i18n="teamMember2Role">Fundador & CEO</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="atuacao" class="py-20 scroll-mt-24">
-            <div class="container mx-auto px-6">
-                 <div class="text-center max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal-section" data-i18n="areaTitle">A Nossa Zona de Atuação</h2>
-                    <p class="text-lg text-cinza-claro mb-12 reveal-section" data-i18n="areaText">Prestamos serviços em todo o distrito de Braga. O mapa abaixo ilustra a nossa principal área de cobertura.</p>
-                </div>
-                <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-lg overflow-hidden reveal-card">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191496.29119992857!2d-8.68213191984252!3d41.54544857924982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2457634621b339%3A0x400ebbde49038d0!2sBraga%2C%20Portugal!5e0!3m2!1spt-PT!2spt!4v1689450000000!5m2!1spt-PT!2spt" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <!-- Rodapé -->
@@ -165,28 +130,29 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
                 <div>
-                    <h3 class="font-bold text-lg mb-4" data-i18n="footerAbout">Sobre a Almalar</h3>
-                    <p class="text-cinza-claro text-sm" data-i18n="footerAboutText">Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.</p>
+                    <h3 class="font-bold text-lg mb-4">Sobre a Almalar</h3>
+                    <p class="text-cinza-claro text-sm">Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.</p>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-4" data-i18n="footerLinks">Navegação</h3>
+                    <h3 class="font-bold text-lg mb-4">Navegação</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="sobre-nos.html" class="hover:text-cinza-botao" data-i18n="navAbout">Sobre Nós</a></li>
-                        <li><a href="servicos.html" class="hover:text-cinza-botao" data-i18n="navServices">Serviços</a></li>
-                        <li><a href="testemunhos.html" class="hover:text-cinza-botao" data-i18n="navTestimonials">Testemunhos</a></li>
-                        <li><a href="blog.html" class="hover:text-cinza-botao" data-i18n="navBlog">Blog</a></li>
+                        <li><a href="sobre-nos.html" class="hover:text-cinza-botao">Sobre Nós</a></li>
+                        <li><a href="servicos.html" class="hover:text-cinza-botao">Serviços</a></li>
+                        <li><a href="trabalha-connosco.html" class="hover:text-cinza-botao">Trabalha Connosco</a></li>
+                        <li><a href="blog.html" class="hover:text-cinza-botao">Blog</a></li>
+                        <li><a href="testemunhos.html" class="hover:text-cinza-botao">Testemunhos</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-4" data-i18n="footerContact">Contactos</h3>
+                    <h3 class="font-bold text-lg mb-4">Contactos</h3>
                     <ul class="space-y-2 text-cinza-claro text-sm">
-                        <li class="flex items-center justify-center md:justify-start gap-2"><span data-i18n="footerArea">Distrito de Braga</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-2"><span>Distrito de Braga</span></li>
                         <li class="flex items-center justify-center md:justify-start gap-2"><a href="tel:+351915471016" class="hover:text-cinza-botao">915 471 016</a></li>
                         <li class="flex items-center justify-center md:justify-start gap-2"><a href="mailto:geral@almalar.pt" class="hover:text-cinza-botao">geral@almalar.pt</a></li>
                     </ul>
                 </div>
                  <div>
-                    <h3 class="font-bold text-lg mb-4" data-i18n="footerFollow">Siga-nos</h3>
+                    <h3 class="font-bold text-lg mb-4">Siga-nos</h3>
                     <div class="flex space-x-4 justify-center md:justify-start">
                         <a href="#" aria-label="Facebook" class="text-cinza-claro hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/></svg></a>
                         <a href="#" aria-label="Instagram" class="text-cinza-claro hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.28-.059-1.688-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
@@ -195,7 +161,7 @@
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-                <p class="text-cinza-claro text-sm" data-i18n="footerRights">© 2025 Almalar - Todos os direitos reservados</p>
+                <p class="text-cinza-claro text-sm">© 2025 Almalar - Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
@@ -212,117 +178,8 @@
                     mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
                 }
             });
-
-            // --- LÓGICA DE TRADUÇÃO ---
-            const translations = {
-                en: {
-                    pageTitle: "About Us - Almalar",
-                    navAbout: "About Us",
-                    navServices: "Services",
-                    navTestimonials: "Testimonials",
-                    navBlog: "Blog",
-                    navWorkWithUs: "Work With Us",
-                    navFaq: "FAQ",
-                    navContact: "Contact",
-                    title: "About Us",
-                    subtitle: "Caring is our calling.",
-                    storyTitle: "Our Story",
-                    p1: "Almalar was born from a simple yet powerful idea: everyone deserves to age with dignity, comfort, and joy, in the place they love most - their home. Our mission is to provide excellent care that goes beyond the basics, focusing on quality of life, autonomy, and the emotional well-being of every person we serve.",
-                    p2: "We understand that every family and every situation is unique. That's why we don't offer standardized solutions. Instead, we work with you to create a fully personalized care plan that respects routines, preferences, and individual needs. We want to be an extension of your family, a trusted presence that ensures not only support with daily tasks but also companionship, affection, and security.",
-                    valuesTitle: "Our Values",
-                    value1: "<strong>Empathy:</strong> We always put ourselves in others' shoes, seeking to understand and respond to their emotional and physical needs.",
-                    value2: "<strong>Professionalism:</strong> Our team consists of qualified, experienced, and dedicated professionals undergoing continuous training.",
-                    value3: "<strong>Dignity:</strong> We respect the individuality, privacy, and history of each client, treating everyone with the utmost dignity.",
-                    value4: "<strong>Trust:</strong> We build transparent and honest relationships with families, serving as a pillar of support at all times.",
-                    p3: "We believe that home care is the key to a happy and peaceful aging process. We are committed to making a difference in the lives of our clients and their families, every day.",
-                    teamTitle: "Our Team",
-                    teamSubtitle: "The faces behind our care.",
-                    teamMember1Name: "Daniela Abreu",
-                    teamMember1Role: "Founder & CEO",
-                    teamMember2Name: "Pedro Machado",
-                    teamMember2Role: "Founder & CEO",
-                    areaTitle: "Our Area of Operation",
-                    areaText: "We provide services throughout the district of Braga. The map below illustrates our main coverage area.",
-                    footerAbout: "About Almalar",
-                    footerAboutText: "Care and comfort in your home. Our mission is to ensure your well-being with excellent home care services.",
-                    footerLinks: "Navigation",
-                    footerContact: "Contacts",
-                    footerArea: "Braga District",
-                    footerFollow: "Follow Us",
-                    footerRights: "© 2025 Almalar - All rights reserved"
-                },
-                pt: {
-                    pageTitle: "Sobre Nós - Almalar",
-                    navAbout: "Sobre Nós",
-                    navServices: "Serviços",
-                    navTestimonials: "Testemunhos",
-                    navBlog: "Blog",
-                    navWorkWithUs: "Trabalha Connosco",
-                    navFaq: "FAQ",
-                    navContact: "Contacto",
-                    title: "Sobre Nós",
-                    subtitle: "Cuidar é a nossa vocação.",
-                    storyTitle: "A Nossa História",
-                    p1: "A Almalar nasceu de uma ideia simples, mas poderosa: todos merecem envelhecer com dignidade, conforto e alegria, no lugar que mais amam - a sua casa. A nossa missão é proporcionar um cuidado de excelência que vai além do básico, focando-nos na qualidade de vida, na autonomia e no bem-estar emocional de cada pessoa que servimos.",
-                    p2: "Entendemos que cada família e cada situação é única. Por isso, não oferecemos soluções padronizadas. Em vez disso, trabalhamos consigo para criar um plano de cuidados totalmente personalizado, que respeita as rotinas, as preferências e as necessidades individuais. Queremos ser a extensão da sua família, uma presença de confiança que garante não só o apoio nas tarefas diárias, mas também companhia, carinho e segurança.",
-                    valuesTitle: "Os Nossos Valores",
-                    value1: "<strong>Empatia:</strong> Colocamo-nos sempre no lugar do outro, procurando entender e responder às suas necessidades emocionais e físicas.",
-                    value2: "<strong>Profissionalismo:</strong> A nossa equipa é composta por profissionais qualificados, experientes e dedicados, em formação contínua.",
-                    value3: "<strong>Dignidade:</strong> Respeitamos a individualidade, a privacidade e a história de cada cliente, tratando todos com a máxima dignidade.",
-                    value4: "<strong>Confiança:</strong> Construímos relações transparentes e honestas com as famílias, sendo um pilar de apoio em todos os momentos.",
-                    p3: "Acreditamos que o apoio domiciliário é a chave para um envelhecimento feliz e tranquilo. Estamos comprometidos em fazer a diferença na vida dos nossos clientes e das suas famílias, todos os dias.",
-                    teamTitle: "A Nossa Equipa",
-                    teamSubtitle: "Os rostos por trás do nosso cuidado.",
-                    teamMember1Name: "Daniela Abreu",
-                    teamMember1Role: "Fundadora & CEO",
-                    teamMember2Name: "Pedro Machado",
-                    teamMember2Role: "Fundador & CEO",
-                    areaTitle: "A Nossa Zona de Atuação",
-                    areaText: "Prestamos serviços em todo o distrito de Braga. O mapa abaixo ilustra a nossa principal área de cobertura.",
-                    footerAbout: "Sobre a Almalar",
-                    footerAboutText: "Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.",
-                    footerLinks: "Navegação",
-                    footerContact: "Contactos",
-                    footerArea: "Distrito de Braga",
-                    footerFollow: "Siga-nos",
-                    footerRights: "© 2025 Almalar - Todos os direitos reservados"
-                }
-            };
-
-            let currentLang = localStorage.getItem('language') || 'pt';
-
-            const langSwitcher = document.getElementById('lang-switcher');
-            const langSwitcherMobile = document.getElementById('lang-switcher-mobile');
-
-            function setLanguage(lang) {
-                currentLang = lang;
-                localStorage.setItem('language', lang);
-                document.documentElement.lang = lang;
-                const elements = document.querySelectorAll('[data-i18n]');
-                elements.forEach(el => {
-                    const key = el.getAttribute('data-i18n');
-                    if (translations[lang] && translations[lang][key]) {
-                        el.innerHTML = translations[lang][key];
-                    }
-                });
-                langSwitcher.textContent = lang === 'pt' ? 'EN' : 'PT';
-                if(langSwitcherMobile) {
-                    langSwitcherMobile.textContent = lang === 'pt' ? 'EN' : 'PT';
-                }
-            }
-
-            function toggleLanguage() {
-                const newLang = currentLang === 'pt' ? 'en' : 'pt';
-                setLanguage(newLang);
-            }
-
-            langSwitcher.addEventListener('click', toggleLanguage);
-            if(langSwitcherMobile) {
-                langSwitcherMobile.addEventListener('click', toggleLanguage);
-            }
             
-            setLanguage(currentLang);
-
+            // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
             const sr = ScrollReveal({
                 origin: 'bottom',
                 distance: '50px',
