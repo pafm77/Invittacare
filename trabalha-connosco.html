@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="pageTitle">Trabalha Connosco - Almalar</title>
+    <title>Trabalha Connosco - Almalar</title>
     
     <meta name="description" content="Junte-se à equipa da Almalar. Procuramos profissionais dedicados para os nossos serviços de apoio domiciliário no distrito de Braga. Envie a sua candidatura.">
     <meta property="og:title" content="Trabalha Connosco - Almalar">
@@ -51,15 +51,14 @@
                     <img src="https://i.postimg.cc/0QLzVNMm/logotipo.png" alt="Logotipo Almalar" style="height: 80px;">
                 </a>
                 <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="sobre-nos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navAbout">Sobre Nós</a>
-                    <a href="servicos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navServices">Serviços</a>
-                    <a href="testemunhos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navTestimonials">Testemunhos</a>
-                    <a href="trabalha-connosco.html" class="text-verde-escuro font-bold hover:text-cinza-botao" data-i18n="navWorkWithUs">Trabalha Connosco</a>
-                    <a href="blog.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navBlog">Blog</a>
-                    <a href="contacto.html" class="text-verde-escuro hover:text-cinza-botao transition-colors" data-i18n="navContact">Contacto</a>
+                    <a href="sobre-nos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors">Sobre Nós</a>
+                    <a href="servicos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors">Serviços</a>
+                    <a href="trabalha-connosco.html" class="text-verde-escuro font-bold hover:text-cinza-botao">Trabalha Connosco</a>
+                    <a href="blog.html" class="text-verde-escuro hover:text-cinza-botao transition-colors">Blog</a>
+                    <a href="contacto.html" class="text-verde-escuro hover:text-cinza-botao transition-colors">Contacto</a>
                 </nav>
                 <div class="hidden md:flex items-center gap-4">
-                    <button id="lang-switcher" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro">EN</button>
+                    <a href="orcamento.html" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro transition-colors">Pedir Orçamento</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" class="text-verde-escuro focus:outline-none">
@@ -69,14 +68,13 @@
             </div>
             <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0">
                 <nav class="flex flex-col space-y-4 py-4 text-center">
-                    <a href="sobre-nos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navAbout">Sobre Nós</a>
-                    <a href="servicos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navServices">Serviços</a>
-                    <a href="testemunhos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navTestimonials">Testemunhos</a>
-                    <a href="trabalha-connosco.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navWorkWithUs">Trabalha Connosco</a>
-                    <a href="blog.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navBlog">Blog</a>
-                    <a href="contacto.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2" data-i18n="navContact">Contacto</a>
+                    <a href="sobre-nos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2">Sobre Nós</a>
+                    <a href="servicos.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2">Serviços</a>
+                    <a href="trabalha-connosco.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2">Trabalha Connosco</a>
+                    <a href="blog.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2">Blog</a>
+                    <a href="contacto.html" class="block text-verde-escuro hover:bg-verde-suave rounded-md py-2">Contacto</a>
                     <div class="pt-4">
-                        <button id="lang-switcher-mobile" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-escuro w-1/2 mx-auto">EN</button>
+                        <a href="orcamento.html" class="bg-cinza-botao text-white px-6 py-3 rounded-md hover:bg-verde-escuro transition-colors w-2/3 mx-auto">Pedir Orçamento</a>
                     </div>
                 </nav>
             </div>
@@ -86,40 +84,58 @@
     <main>
         <div class="bg-verde-suave py-16">
             <div class="container mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-verde-escuro" data-i18n="title">Trabalha Connosco</h1>
-                <p class="text-lg text-verde-escuro mt-2" data-i18n="subtitle">Junte-se a uma equipa dedicada a fazer a diferença.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-verde-escuro">Trabalha Connosco</h1>
+                <p class="text-lg text-verde-escuro mt-2">Junte-se a uma equipa dedicada a fazer a diferença.</p>
             </div>
         </div>
 
         <div class="py-20">
             <div class="container mx-auto px-6">
                 <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border-t-4 border-cinza-botao reveal-card">
-                    <p class="text-cinza-claro mb-8" data-i18n="formIntro">Procuramos profissionais apaixonados e dedicados que partilhem os nossos valores de empatia, profissionalismo e dignidade. Se acredita que pode contribuir para a nossa missão, preencha o formulário abaixo.</p>
+                    <p class="text-cinza-claro mb-8">Procuramos profissionais apaixonados e dedicados que partilhem os nossos valores de empatia, profissionalismo e dignidade. Se acredita que pode contribuir para a nossa missão, preencha o formulário abaixo.</p>
                     
                     <form action="https://formspree.io/f/geral@almalar.pt" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="nome" class="block text-verde-escuro font-bold mb-2" data-i18n="formFirstName">Nome <span class="text-red-500">*</span></label>
+                                <label for="nome" class="block text-verde-escuro font-bold mb-2">Nome <span class="text-red-500">*</span></label>
                                 <input type="text" id="nome" name="Nome" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
                             </div>
                             <div>
-                                <label for="apelido" class="block text-verde-escuro font-bold mb-2" data-i18n="formLastName">Apelido <span class="text-red-500">*</span></label>
+                                <label for="apelido" class="block text-verde-escuro font-bold mb-2">Apelido <span class="text-red-500">*</span></label>
                                 <input type="text" id="apelido" name="Apelido" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
                             </div>
                             <div class="md:col-span-2">
-                                <label for="email" class="block text-verde-escuro font-bold mb-2" data-i18n="formEmail">Email <span class="text-red-500">*</span></label>
+                                <label for="email" class="block text-verde-escuro font-bold mb-2">Email <span class="text-red-500">*</span></label>
                                 <input type="email" id="email" name="Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
                             </div>
                             <div class="md:col-span-2">
-                                <label for="contacto" class="block text-verde-escuro font-bold mb-2" data-i18n="formPhone">Contacto Telefónico <span class="text-red-500">*</span></label>
+                                <label for="contacto" class="block text-verde-escuro font-bold mb-2">Contacto Telefónico <span class="text-red-500">*</span></label>
                                 <input type="tel" id="contacto" name="Contacto" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
                             </div>
+                            <div class="md:col-span-2">
+                                <label for="area-candidatura" class="block text-verde-escuro font-bold mb-2">Área a que se candidata <span class="text-red-500">*</span></label>
+                                <select id="area-candidatura" name="Área de Candidatura" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                                    <option value="" disabled selected>Selecione uma área</option>
+                                    <option value="Enfermagem">Enfermagem</option>
+                                    <option value="Fisioterapia">Fisioterapia</option>
+                                    <option value="Psicologia">Psicologia</option>
+                                    <option value="Nutrição">Nutrição</option>
+                                    <option value="Assistência domiciliária">Assistência domiciliária</option>
+                                    <option value="Limpeza">Limpeza</option>
+                                    <option value="Outra">Outra</option>
+                                </select>
+                            </div>
+                            <!-- ADICIONADO: Campo de Observação -->
+                            <div class="md:col-span-2">
+                                <label for="observacao" class="block text-verde-escuro font-bold mb-2">Observações (Opcional)</label>
+                                <textarea id="observacao" name="Observação" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao"></textarea>
+                            </div>
                         </div>
-                        <div class="mt-6 text-sm text-cinza-claro" data-i18n="formRequiredLegend">
+                        <div class="mt-6 text-sm text-cinza-claro">
                             <span class="text-red-500">*</span> Campo de preenchimento obrigatório
                         </div>
                         <div class="text-center mt-8">
-                            <button type="submit" class="bg-cinza-botao text-white font-bold px-8 py-3 rounded-md hover:bg-verde-escuro transition-colors duration-300" data-i18n="formSubmit">Submeter Candidatura</button>
+                            <button type="submit" class="bg-cinza-botao text-white font-bold px-8 py-3 rounded-md hover:bg-verde-escuro transition-colors duration-300">Submeter Candidatura</button>
                         </div>
                     </form>
                 </div>
@@ -132,28 +148,29 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
                 <div>
-                    <h3 class="font-bold text-lg mb-4" data-i18n="footerAbout">Sobre a Almalar</h3>
-                    <p class="text-cinza-claro text-sm" data-i18n="footerAboutText">Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.</p>
+                    <h3 class="font-bold text-lg mb-4">Sobre a Almalar</h3>
+                    <p class="text-cinza-claro text-sm">Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.</p>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-4" data-i18n="footerLinks">Navegação</h3>
+                    <h3 class="font-bold text-lg mb-4">Navegação</h3>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="sobre-nos.html" class="hover:text-cinza-botao" data-i18n="navAbout">Sobre Nós</a></li>
-                        <li><a href="servicos.html" class="hover:text-cinza-botao" data-i18n="navServices">Serviços</a></li>
-                        <li><a href="testemunhos.html" class="hover:text-cinza-botao" data-i18n="navTestimonials">Testemunhos</a></li>
-                        <li><a href="blog.html" class="hover:text-cinza-botao" data-i18n="navBlog">Blog</a></li>
+                        <li><a href="sobre-nos.html" class="hover:text-cinza-botao">Sobre Nós</a></li>
+                        <li><a href="servicos.html" class="hover:text-cinza-botao">Serviços</a></li>
+                        <li><a href="trabalha-connosco.html" class="hover:text-cinza-botao">Trabalha Connosco</a></li>
+                        <li><a href="blog.html" class="hover:text-cinza-botao">Blog</a></li>
+                        <li><a href="testemunhos.html" class="hover:text-cinza-botao">Testemunhos</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-4" data-i18n="footerContact">Contactos</h3>
+                    <h3 class="font-bold text-lg mb-4">Contactos</h3>
                     <ul class="space-y-2 text-cinza-claro text-sm">
-                        <li class="flex items-center justify-center md:justify-start gap-2"><span data-i18n="footerArea">Distrito de Braga</span></li>
+                        <li class="flex items-center justify-center md:justify-start gap-2"><span>Distrito de Braga</span></li>
                         <li class="flex items-center justify-center md:justify-start gap-2"><a href="tel:+351915471016" class="hover:text-cinza-botao">915 471 016</a></li>
                         <li class="flex items-center justify-center md:justify-start gap-2"><a href="mailto:geral@almalar.pt" class="hover:text-cinza-botao">geral@almalar.pt</a></li>
                     </ul>
                 </div>
                  <div>
-                    <h3 class="font-bold text-lg mb-4" data-i18n="footerFollow">Siga-nos</h3>
+                    <h3 class="font-bold text-lg mb-4">Siga-nos</h3>
                     <div class="flex space-x-4 justify-center md:justify-start">
                         <a href="#" aria-label="Facebook" class="text-cinza-claro hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.41 0 22.675 0z"/></svg></a>
                         <a href="#" aria-label="Instagram" class="text-cinza-claro hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.28-.059-1.688-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
@@ -162,7 +179,7 @@
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-                <p class="text-cinza-claro text-sm" data-i18n="footerRights">© 2025 Almalar - Todos os direitos reservados</p>
+                <p class="text-cinza-claro text-sm">© 2025 Almalar - Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
@@ -179,95 +196,8 @@
                     mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
                 }
             });
-
-            // --- LÓGICA DE TRADUÇÃO ---
-            const translations = {
-                en: {
-                    pageTitle: "Work With Us - Almalar",
-                    navAbout: "About Us",
-                    navServices: "Services",
-                    navBlog: "Blog",
-                    navWorkWithUs: "Work With Us",
-                    navFaq: "FAQ",
-                    navContact: "Contact",
-                    title: "Work With Us",
-                    subtitle: "Join a team dedicated to making a difference.",
-                    formIntro: "We are looking for passionate and dedicated professionals who share our values of empathy, professionalism, and dignity. If you believe you can contribute to our mission, please fill out the form below.",
-                    formFirstName: "First Name",
-                    formLastName: "Last Name",
-                    formEmail: "Email",
-                    formPhone: "Phone Contact",
-                    formRequiredLegend: "* Required field",
-                    formSubmit: "Submit Application",
-                    footerAbout: "About Almalar",
-                    footerAboutText: "Care and comfort in your home. Our mission is to ensure your well-being with excellent home care services.",
-                    footerLinks: "Navigation",
-                    footerContact: "Contacts",
-                    footerArea: "Braga District",
-                    footerFollow: "Follow Us",
-                    footerRights: "© 2025 Almalar - All rights reserved"
-                },
-                pt: {
-                    pageTitle: "Trabalha Connosco - Almalar",
-                    navAbout: "Sobre Nós",
-                    navServices: "Serviços",
-                    navBlog: "Blog",
-                    navWorkWithUs: "Trabalha Connosco",
-                    navFaq: "FAQ",
-                    navContact: "Contacto",
-                    title: "Trabalha Connosco",
-                    subtitle: "Junte-se a uma equipa dedicada a fazer a diferença.",
-                    formIntro: "Procuramos profissionais apaixonados e dedicados que partilhem os nossos valores de empatia, profissionalismo e dignidade. Se acredita que pode contribuir para a nossa missão, preencha o formulário abaixo.",
-                    formFirstName: "Nome",
-                    formLastName: "Apelido",
-                    formEmail: "Email",
-                    formPhone: "Contacto Telefónico",
-                    formRequiredLegend: "* Campo de preenchimento obrigatório",
-                    formSubmit: "Submeter Candidatura",
-                    footerAbout: "Sobre a Almalar",
-                    footerAboutText: "Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.",
-                    footerLinks: "Navegação",
-                    footerContact: "Contactos",
-                    footerArea: "Distrito de Braga",
-                    footerFollow: "Siga-nos",
-                    footerRights: "© 2025 Almalar - Todos os direitos reservados"
-                }
-            };
-
-            let currentLang = localStorage.getItem('language') || 'pt';
-
-            const langSwitcher = document.getElementById('lang-switcher');
-            const langSwitcherMobile = document.getElementById('lang-switcher-mobile');
-
-            function setLanguage(lang) {
-                currentLang = lang;
-                localStorage.setItem('language', lang);
-                document.documentElement.lang = lang;
-                const elements = document.querySelectorAll('[data-i18n]');
-                elements.forEach(el => {
-                    const key = el.getAttribute('data-i18n');
-                    if (translations[lang] && translations[lang][key]) {
-                        el.innerHTML = translations[lang][key];
-                    }
-                });
-                langSwitcher.textContent = lang === 'pt' ? 'EN' : 'PT';
-                if(langSwitcherMobile) {
-                    langSwitcherMobile.textContent = lang === 'pt' ? 'EN' : 'PT';
-                }
-            }
-
-            function toggleLanguage() {
-                const newLang = currentLang === 'pt' ? 'en' : 'pt';
-                setLanguage(newLang);
-            }
-
-            langSwitcher.addEventListener('click', toggleLanguage);
-            if(langSwitcherMobile) {
-                langSwitcherMobile.addEventListener('click', toggleLanguage);
-            }
             
-            setLanguage(currentLang);
-
+            // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
             const sr = ScrollReveal({
                 origin: 'bottom',
                 distance: '50px',
