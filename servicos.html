@@ -147,30 +147,42 @@
 
         <section id="pedido-servico" class="bg-verde-suave py-20 scroll-mt-24">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-2 reveal-section">Peça um Serviço Específico</h2>
-                <p class="text-lg text-center text-cinza-claro mb-12 reveal-section">Tem interesse num serviço? Preencha o formulário e entraremos em contacto.</p>
-                <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg reveal-card">
-                    <form action="https://formspree.io/f/geral@almalar.pt" method="POST">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-2 reveal-section">Peça o Seu Orçamento</h2>
+                <p class="text-lg text-center text-cinza-claro mb-12 reveal-section">Receba uma proposta personalizada e sem compromisso.</p>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg reveal-card">
+                    <form action="https://formspree.io/f/SUBUSTITUIR_PELO_SEU_URL" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="service-nome" class="block text-verde-escuro font-bold mb-2">Nome</label>
-                                <input type="text" id="service-nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                                <label for="quote-nome" class="block text-verde-escuro font-bold mb-2">Nome <span class="text-red-500">*</span></label>
+                                <input type="text" id="quote-nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
                             </div>
                             <div>
-                                <label for="service-apelido" class="block text-verde-escuro font-bold mb-2">Apelido</label>
-                                <input type="text" id="service-apelido" name="apelido" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                                <label for="quote-apelido" class="block text-verde-escuro font-bold mb-2">Apelido <span class="text-red-500">*</span></label>
+                                <input type="text" id="quote-apelido" name="apelido" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
                             </div>
-                            <div class="md:col-span-2">
-                                <label for="service-email" class="block text-verde-escuro font-bold mb-2">Email</label>
-                                <input type="email" id="service-email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                            <div>
+                                <label for="quote-concelho" class="block text-verde-escuro font-bold mb-2">Concelho <span class="text-red-500">*</span></label>
+                                <select id="quote-concelho" name="concelho" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                                    <option value="" disabled selected>Selecione um concelho</option>
+                                    <option value="Amares">Amares</option>
+                                    <option value="Barcelos">Barcelos</option>
+                                    <option value="Braga">Braga</option>
+                                    <option value="Cabeceiras de Basto">Cabeceiras de Basto</option>
+                                    <option value="Celorico de Basto">Celorico de Basto</option>
+                                    <option value="Esposende">Esposende</option>
+                                    <option value="Fafe">Fafe</option>
+                                    <option value="Guimarães">Guimarães</option>
+                                    <option value="Póvoa de Lanhoso">Póvoa de Lanhoso</option>
+                                    <option value="Terras de Bouro">Terras de Bouro</option>
+                                    <option value="Vieira do Minho">Vieira do Minho</option>
+                                    <option value="Vila Nova de Famalicão">Vila Nova de Famalicão</option>
+                                    <option value="Vila Verde">Vila Verde</option>
+                                    <option value="Vizela">Vizela</option>
+                                </select>
                             </div>
-                            <div class="md:col-span-2">
-                                <label for="service-contacto" class="block text-verde-escuro font-bold mb-2">Contacto Telefónico</label>
-                                <input type="tel" id="service-contacto" name="contacto" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
-                            </div>
-                            <div class="md:col-span-2">
-                                <label for="service-servico" class="block text-verde-escuro font-bold mb-2">Serviço Pretendido</label>
-                                <select id="service-servico" name="servico" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                             <div>
+                                <label for="quote-servico" class="block text-verde-escuro font-bold mb-2">Serviço Pretendido <span class="text-red-500">*</span></label>
+                                <select id="quote-servico" name="servico" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
                                     <option value="" disabled selected>Selecione um serviço</option>
                                     <option value="Enfermagem">Enfermagem</option>
                                     <option value="Psicologia">Psicologia</option>
@@ -180,9 +192,24 @@
                                     <option value="Assistência ao domicílio">Assistência ao domicílio</option>
                                 </select>
                             </div>
+                            <div>
+                                <label for="quote-email" class="block text-verde-escuro font-bold mb-2">Email <span class="text-red-500">*</span></label>
+                                <input type="email" id="quote-email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                            </div>
+                            <div>
+                                <label for="quote-telemovel" class="block text-verde-escuro font-bold mb-2">Nº de Telemóvel <span class="text-red-500">*</span></label>
+                                <input type="tel" id="quote-telemovel" name="telemovel" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="quote-comentario" class="block text-verde-escuro font-bold mb-2">Comentário (Opcional)</label>
+                                <textarea id="quote-comentario" name="comentario" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao"></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-sm text-cinza-claro">
+                            <span class="text-red-500">*</span> Campo de preenchimento obrigatório
                         </div>
                         <div class="text-center mt-8">
-                            <button type="submit" class="bg-cinza-botao text-white font-bold px-8 py-3 rounded-md hover:bg-verde-escuro transition-colors duration-300">Pedir Serviço</button>
+                            <button type="submit" class="bg-cinza-botao text-white font-bold px-8 py-3 rounded-md hover:bg-verde-escuro transition-colors duration-300">Submeter Pedido</button>
                         </div>
                     </form>
                 </div>
@@ -236,27 +263,31 @@
             // --- LÓGICA DO MENU MOBILE ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
-                    mobileMenu.style.maxHeight = '0px';
-                } else {
-                    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
-                }
-            });
+            const script = document.querySelector('script[src*="cdn.tailwindcss.com"]');
             
-            // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
-            const sr = ScrollReveal({
-                origin: 'bottom',
-                distance: '50px',
-                duration: 800,
-                delay: 200,
-                easing: 'ease-in-out',
-                reset: false
-            });
+            if (mobileMenuButton && mobileMenu && script) {
+                mobileMenuButton.addEventListener('click', () => {
+                    if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
+                        mobileMenu.style.maxHeight = '0px';
+                    } else {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    }
+                });
+            }
 
-            sr.reveal('.service-card', { interval: 150 });
-            sr.reveal('.reveal-section');
-            sr.reveal('.reveal-card');
+            // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
+            if(typeof ScrollReveal !== 'undefined'){
+                const sr = ScrollReveal({
+                    origin: 'bottom',
+                    distance: '50px',
+                    duration: 800,
+                    delay: 200,
+                    easing: 'ease-in-out',
+                    reset: false
+                });
+
+                sr.reveal('.reveal-card');
+            }
         });
     </script>
 </body>
