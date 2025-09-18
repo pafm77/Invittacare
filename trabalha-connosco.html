@@ -8,8 +8,8 @@
     <meta name="description" content="Junte-se à equipa da Invitta. Procuramos profissionais dedicados para os nossos serviços de apoio domiciliário no distrito de Braga. Envie a sua candidatura.">
     <meta property="og:title" content="Trabalha Connosco - Invitta">
     <meta property="og:description" content="Junte-se à equipa da Invitta. Procuramos profissionais dedicados para os nossos serviços de apoio domiciliário no distrito de Braga. Envie a sua candidatura.">
-    <meta property="og:url" content="https://almalar-final-plus-m8ma.vercel.app/trabalha-connosco.html">
-    <meta property="og:image" content="https://i.postimg.cc/0QLzVNMm/logotipo.png">
+    <meta property="og:url" content="https://invittacare.netlify.app/trabalha-connosco.html">
+    <meta property="og:image" content="https://i.postimg.cc/YqDwWVv8/logoinvitta-cabecalho.jpg">
     <meta property="twitter:card" content="summary_large_image">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -48,7 +48,7 @@
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center py-3">
                 <a href="index.html" class="flex items-center">
-                    <img src="https://i.postimg.cc/YqDwWVv8/logoinvitta-cabecalho.jpg" alt="Logotipo Almalar" style="height: 80px;">
+                    <img src="https://i.postimg.cc/YqDwWVv8/logoinvitta-cabecalho.jpg" alt="Logotipo Invitta" style="height: 80px;">
                 </a>
                 <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
                     <a href="sobre-nos.html" class="text-verde-escuro hover:text-cinza-botao transition-colors">Sobre Nós</a>
@@ -94,7 +94,8 @@
                 <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border-t-4 border-cinza-botao reveal-card">
                     <p class="text-cinza-claro mb-8">Procuramos profissionais apaixonados e dedicados que partilhem os nossos valores de empatia, profissionalismo e dignidade. Se acredita que pode contribuir para a nossa missão, preencha o formulário abaixo.</p>
                     
-                    <form action="https://formspree.io/f/geral@invitta.pt" method="POST">
+                    <!-- FORMULÁRIO ATUALIZADO -->
+                    <form action="https://formspree.io/f/xkgvldjl" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="nome" class="block text-verde-escuro font-bold mb-2">Nome <span class="text-red-500">*</span></label>
@@ -125,7 +126,6 @@
                                     <option value="Outra">Outra</option>
                                 </select>
                             </div>
-                            <!-- ADICIONADO: Campo de Observação -->
                             <div class="md:col-span-2">
                                 <label for="observacao" class="block text-verde-escuro font-bold mb-2">Observações (Opcional)</label>
                                 <textarea id="observacao" name="Observação" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao"></textarea>
@@ -183,31 +183,56 @@
             </div>
         </div>
     </footer>
+    
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-verde-escuro text-white p-4 flex flex-col sm:flex-row justify-between items-center z-50 hidden">
+        <p class="text-sm text-center sm:text-left mb-4 sm:mb-0">Este site utiliza tecnologias para guardar as suas preferências. Ao continuar a navegar, concorda com a sua utilização.</p>
+        <button id="accept-cookies" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-suave hover:text-verde-escuro transition-colors">Aceitar</button>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // --- LÓGICA DO MENU MOBILE ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
-                    mobileMenu.style.maxHeight = '0px';
-                } else {
-                    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
+                        mobileMenu.style.maxHeight = '0px';
+                    } else {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    }
+                });
+            }
+
+            // --- LÓGICA DO BANNER DE COOKIES ---
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptCookiesButton = document.getElementById('accept-cookies');
+
+            if (cookieBanner && acceptCookiesButton) {
+                if (!localStorage.getItem('cookies_accepted')) {
+                    cookieBanner.classList.remove('hidden');
                 }
-            });
+
+                acceptCookiesButton.addEventListener('click', () => {
+                    localStorage.setItem('cookies_accepted', 'true');
+                    cookieBanner.classList.add('hidden');
+                });
+            }
             
             // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
-            const sr = ScrollReveal({
-                origin: 'bottom',
-                distance: '50px',
-                duration: 800,
-                delay: 200,
-                easing: 'ease-in-out',
-                reset: false
-            });
+            if(typeof ScrollReveal !== 'undefined'){
+                const sr = ScrollReveal({
+                    origin: 'bottom',
+                    distance: '50px',
+                    duration: 800,
+                    delay: 200,
+                    easing: 'ease-in-out',
+                    reset: false
+                });
 
-            sr.reveal('.reveal-card');
+                sr.reveal('.reveal-card');
+            }
         });
     </script>
 </body>
