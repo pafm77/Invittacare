@@ -257,15 +257,19 @@
             </div>
         </div>
     </footer>
+    
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-verde-escuro text-white p-4 flex flex-col sm:flex-row justify-between items-center z-50 hidden">
+        <p class="text-sm text-center sm:text-left mb-4 sm:mb-0">Este site utiliza tecnologias para guardar as suas preferências. Ao continuar a navegar, concorda com a sua utilização.</p>
+        <button id="accept-cookies" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-suave hover:text-verde-escuro transition-colors">Aceitar</button>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // --- LÓGICA DO MENU MOBILE ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            const script = document.querySelector('script[src*="cdn.tailwindcss.com"]');
             
-            if (mobileMenuButton && mobileMenu && script) {
+            if (mobileMenuButton && mobileMenu) {
                 mobileMenuButton.addEventListener('click', () => {
                     if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
                         mobileMenu.style.maxHeight = '0px';
@@ -275,6 +279,21 @@
                 });
             }
 
+            // --- LÓGICA DO BANNER DE COOKIES ---
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptCookiesButton = document.getElementById('accept-cookies');
+
+            if (cookieBanner && acceptCookiesButton) {
+                if (!localStorage.getItem('cookies_accepted')) {
+                    cookieBanner.classList.remove('hidden');
+                }
+
+                acceptCookiesButton.addEventListener('click', () => {
+                    localStorage.setItem('cookies_accepted', 'true');
+                    cookieBanner.classList.add('hidden');
+                });
+            }
+            
             // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
             if(typeof ScrollReveal !== 'undefined'){
                 const sr = ScrollReveal({
@@ -286,7 +305,8 @@
                     reset: false
                 });
 
-                sr.reveal('.reveal-card');
+                sr.reveal('.reveal-section');
+                sr.reveal('.reveal-card', { interval: 150 });
             }
         });
     </script>
