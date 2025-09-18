@@ -8,7 +8,7 @@
     <meta name="description" content="Peça uma avaliação e orçamento gratuito para os serviços de apoio domiciliário da Invitta. Preencha o nosso formulário e entraremos em contacto consigo.">
     <meta property="og:title" content="Pedir Orçamento - Invitta">
     <meta property="og:description" content="Peça uma avaliação e orçamento gratuito para os serviços de apoio domiciliário da Invitta.">
-    <meta property="og:url" content="https://almalar-final-plus-m8ma.vercel.app/orcamento.html">
+    <meta property="og:url" content="https://invittacare.netlify.app/orcamento.html">
     <meta property="og:image" content="https://i.postimg.cc/YqDwWVv8/logoinvitta-cabecalho.jpg">
     <meta property="twitter:card" content="summary_large_image">
 
@@ -92,7 +92,8 @@
         <div class="py-20">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-cinza-botao reveal-card">
-                    <form action="https://formspree.io/f/SUBUSTITUIR_PELO_SEU_URL" method="POST">
+                    <!-- FORMULÁRIO ATUALIZADO -->
+                    <form action="https://formspree.io/f/xeolbyav" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="quote-nome" class="block text-verde-escuro font-bold mb-2">Nome <span class="text-red-500">*</span></label>
@@ -205,25 +206,30 @@
             // --- LÓGICA DO MENU MOBILE ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
-                    mobileMenu.style.maxHeight = '0px';
-                } else {
-                    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
-                }
-            });
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
+                        mobileMenu.style.maxHeight = '0px';
+                    } else {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    }
+                });
+            }
 
             // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
-            const sr = ScrollReveal({
-                origin: 'bottom',
-                distance: '50px',
-                duration: 800,
-                delay: 200,
-                easing: 'ease-in-out',
-                reset: false
-            });
+            if(typeof ScrollReveal !== 'undefined'){
+                const sr = ScrollReveal({
+                    origin: 'bottom',
+                    distance: '50px',
+                    duration: 800,
+                    delay: 200,
+                    easing: 'ease-in-out',
+                    reset: false
+                });
 
-            sr.reveal('.reveal-card');
+                sr.reveal('.reveal-card');
+            }
         });
     </script>
 </body>
