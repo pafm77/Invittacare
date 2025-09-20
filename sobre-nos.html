@@ -8,8 +8,8 @@
     <meta name="description" content="Conheça a história, a missão e os valores da Invitta. Somos uma equipa dedicada a fornecer cuidados domiciliários com empatia, profissionalismo e dignidade.">
     <meta property="og:title" content="Sobre Nós - Invitta">
     <meta property="og:description" content="Conheça a história, a missão e os valores da Invitta. Somos uma equipa dedicada a fornecer cuidados domiciliários com empatia, profissionalismo e dignidade.">
-    <meta property="og:url" content="https://almalar-final-plus-m8ma.vercel.app/sobre-nos.html">
-    <meta property="og:image" content="https://i.postimg.cc/0QLzVNMm/logotipo.png">
+    <meta property="og:url" content="https://invittacare.netlify.app/sobre-nos.html">
+    <meta property="og:image" content="https://i.postimg.cc/YqDwWVv8/logoinvitta-cabecalho.jpg">
     <meta property="twitter:card" content="summary_large_image">
 
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -64,7 +64,7 @@
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center py-3">
                 <a href="index.html" class="flex items-center">
-                    <img src="https://i.postimg.cc/YqDwWVv8/logoinvitta-cabecalho.jpg" alt="Logotipo Almalar" style="height: 80px;">
+                    <img src="https://i.postimg.cc/YqDwWVv8/logoinvitta-cabecalho.jpg" alt="Logotipo Invitta" style="height: 80px;">
                 </a>
                 <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
                     <a href="sobre-nos.html" class="text-verde-escuro font-bold hover:text-cinza-botao transition-colors">Sobre Nós</a>
@@ -101,17 +101,16 @@
         <div class="bg-verde-suave py-16">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold text-verde-escuro">Sobre Nós</h1>
-                <p class="text-lg text-verde-escuro mt-2">Cuidar é a nossa vocação.</p>
+                <p class="text-lg text-verde-escuro mt-2">A nossa história: uma paixão por cuidar.</p>
             </div>
         </div>
 
         <div id="historia" class="py-20 scroll-mt-24">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="prose lg:prose-xl max-w-none text-verde-escuro reveal-section">
-                    <h2>A Nossa História</h2>
-                    <p class="lead text-xl">Somos dois jovens empreendedores que partilham uma visão comum: a de que o cuidado na terceira idade pode e deve ser mais humano, mais próximo e mais digno. A Invitta nasceu da nossa experiência pessoal e da vontade de criar um serviço que gostaríamos que a nossa própria família recebesse.</p>
-                    <p>Crescemos a ver a importância dos laços familiares e do conforto do lar. Vimos de perto os desafios que as famílias enfrentam quando um ente querido começa a precisar de apoio. Foi essa vivência que nos motivou a construir um projeto diferente, focado não apenas em prestar serviços, mas em construir relações de confiança e em ser uma verdadeira extensão da família.</p>
-                    <p>A nossa missão é simples: garantir que todos possam envelhecer com a máxima qualidade de vida, segurança e alegria, no lugar que mais amam – a sua casa. Cada plano de cuidados que desenhamos é único, porque cada pessoa é única. Ouvimos, planeamos e cuidamos com o profissionalismo de uma equipa certificada e o carinho de quem realmente se importa.</p>
+                    <h2>Uma Visão Nascida da Proximidade</h2>
+                    <p class="lead text-xl">A Invitta nasceu da visão de dois jovens empreendedores que, por experiência própria e proximidade com as suas comunidades, sentiram que era possível oferecer mais e melhor no campo do apoio domiciliário. Vimos a necessidade de um serviço que fosse além do assistencialismo, um serviço que trouxesse uma abordagem mais humana, personalizada e digna ao cuidado em casa.</p>
+                    <p>A nossa missão é simples: levar bem-estar, autonomia e tranquilidade a todas as pessoas que precisam de apoio, no conforto e segurança do seu lar. Seja no processo de envelhecimento, numa recuperação pós-operatória, no acompanhamento de doenças crónicas ou simplesmente na necessidade de ajuda com as tarefas diárias, acreditamos que o cuidado em casa é a chave para uma vida mais feliz e plena. Não oferecemos soluções padronizadas, porque não existem pessoas padronizadas.</p>
                     
                     <h2>Os Nossos Valores</h2>
                     <ul>
@@ -120,9 +119,11 @@
                         <li><strong>Dignidade:</strong> Respeitamos a individualidade, a privacidade e a história de cada cliente, tratando todos com a máxima dignidade.</li>
                         <li><strong>Confiança:</strong> Construímos relações transparentes e honestas com as famílias, sendo um pilar de apoio em todos os momentos.</li>
                     </ul>
+                    <p>Mais do que uma empresa, somos uma equipa de pessoas apaixonadas por pessoas. Estamos comprometidos em ser a extensão da sua família, uma presença de confiança que garante não só o apoio técnico, mas também companhia, carinho e segurança. Queremos fazer a diferença na vida dos nossos clientes e das suas famílias, todos os dias.</p>
                 </div>
             </div>
         </div>
+        
     </main>
 
     <!-- Rodapé -->
@@ -165,33 +166,59 @@
             </div>
         </div>
     </footer>
+    
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-verde-escuro text-white p-4 flex flex-col sm:flex-row justify-between items-center z-50 hidden">
+        <p class="text-sm text-center sm:text-left mb-4 sm:mb-0">Este site utiliza tecnologias para guardar as suas preferências. Ao continuar a navegar, concorda com a sua utilização.</p>
+        <button id="accept-cookies" class="bg-cinza-botao text-white px-4 py-2 rounded-md hover:bg-verde-suave hover:text-verde-escuro transition-colors">Aceitar</button>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // --- LÓGICA DO MENU MOBILE ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
-                    mobileMenu.style.maxHeight = '0px';
-                } else {
-                    mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    if (mobileMenu.style.maxHeight && mobileMenu.style.maxHeight !== '0px') {
+                        mobileMenu.style.maxHeight = '0px';
+                    } else {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    }
+                });
+            }
+
+            // --- LÓGICA DO BANNER DE COOKIES ---
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptCookiesButton = document.getElementById('accept-cookies');
+
+            if (cookieBanner && acceptCookiesButton) {
+                if (!localStorage.getItem('cookies_accepted')) {
+                    cookieBanner.classList.remove('hidden');
                 }
-            });
+
+                acceptCookiesButton.addEventListener('click', () => {
+                    localStorage.setItem('cookies_accepted', 'true');
+                    cookieBanner.classList.add('hidden');
+                });
+            }
             
             // --- LÓGICA DE ANIMAÇÃO SCROLLREVEAL ---
-            const sr = ScrollReveal({
-                origin: 'bottom',
-                distance: '50px',
-                duration: 800,
-                delay: 200,
-                easing: 'ease-in-out',
-                reset: false
-            });
+            if(typeof ScrollReveal !== 'undefined'){
+                const sr = ScrollReveal({
+                    origin: 'bottom',
+                    distance: '50px',
+                    duration: 800,
+                    delay: 200,
+                    easing: 'ease-in-out',
+                    reset: false
+                });
 
-            sr.reveal('.reveal-section');
-            sr.reveal('.reveal-card', { interval: 150 });
+                sr.reveal('.reveal-section');
+                sr.reveal('.reveal-card', { interval: 150 });
+            }
         });
     </script>
 </body>
 </html>
+
