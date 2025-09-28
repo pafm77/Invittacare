@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt" class="scroll-smooth">
 <head>
-
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PFZGQ5P8');</script>
-<!-- End Google Tag Manager -->
-    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PFZGQ5P8');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalha Connosco - Invitta</title>
     
-    <meta name="description" content="Junte-se à equipa da Invitta. Procuramos profissionais dedicados para os nossos serviços ao domicílio no distrito de Braga. Envie a sua candidatura.">
+    <meta name="description" content="Junte-se à equipa da Invitta. Procuramos profissionais dedicados para os nossos serviços de apoio domiciliário no distrito de Braga. Envie a sua candidatura.">
     <meta property="og:title" content="Trabalha Connosco - Invitta">
-    <meta property="og:description" content="Junte-se à equipa da Invitta. Procuramos profissionais dedicados para os nossos serviços ao domicílio no distrito de Braga. Envie a sua candidatura.">
+    <meta property="og:description" content="Junte-se à equipa da Invitta. Procuramos profissionais dedicados para os nossos serviços de apoio domiciliário no distrito de Braga. Envie a sua candidatura.">
     <meta property="og:url" content="https://invittacare.netlify.app/trabalha-connosco.html">
     <meta property="og:image" content="https://i.postimg.cc/YqDwWVv8/logoinvitta-cabecalho.jpg">
     <meta property="twitter:card" content="summary_large_image">
@@ -51,11 +50,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <style> body { font-family: 'Inter', sans-serif; } #mobile-menu { transition: max-height 0.3s ease-in-out; } </style>
 </head>
 <body class="bg-white text-verde-escuro">
-
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFZGQ5P8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFZGQ5P8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Cabeçalho -->
     <header class="bg-white sticky top-0 z-50 shadow-sm">
@@ -108,8 +106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border-t-4 border-cinza-botao reveal-card">
                     <p class="text-cinza-claro mb-8">Procuramos profissionais apaixonados e dedicados que partilhem os nossos valores de empatia, profissionalismo e dignidade. Se acredita que pode contribuir para a nossa missão, preencha o formulário abaixo.</p>
                     
-                    <!-- FORMULÁRIO ATUALIZADO -->
-                    <form action="https://formspree.io/f/xkgvldjl" method="POST">
+                    <form action="https://formspree.io/f/xkgvldjl" method="POST" enctype="multipart/form-data">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="nome" class="block text-verde-escuro font-bold mb-2">Nome <span class="text-red-500">*</span></label>
@@ -127,22 +124,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <label for="contacto" class="block text-verde-escuro font-bold mb-2">Contacto Telefónico <span class="text-red-500">*</span></label>
                                 <input type="tel" id="contacto" name="Contacto" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
                             </div>
-                            <div class="md:col-span-2">
-                                <label for="area-candidatura" class="block text-verde-escuro font-bold mb-2">Área a que se candidata <span class="text-red-500">*</span></label>
-                                <select id="area-candidatura" name="Área de Candidatura" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
+                             <div class="md:col-span-2">
+                                <label for="area" class="block text-verde-escuro font-bold mb-2">Área a que se candidata <span class="text-red-500">*</span></label>
+                                <select id="area" name="Área" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" required>
                                     <option value="" disabled selected>Selecione uma área</option>
                                     <option value="Enfermagem">Enfermagem</option>
-                                    <option value="Fisioterapia">Fisioterapia</option>
                                     <option value="Psicologia">Psicologia</option>
+                                    <option value="Fisioterapia">Fisioterapia</option>
                                     <option value="Nutrição">Nutrição</option>
-                                    <option value="Assistência domiciliária">Assistência Domiciliária</option>
-                                    <option value="Limpeza">Limpeza Doméstica</option>
-                                    <option value="Pilates Clínico">Pilates Clínico</option>
+                                    <option value="Assistência ao Domicílio">Assistência ao Domicílio</option>
+                                    <option value="Limpeza">Limpeza</option>
                                     <option value="Outra">Outra</option>
                                 </select>
                             </div>
+                            <!-- NOVO CAMPO PARA ANEXAR CURRÍCULO -->
                             <div class="md:col-span-2">
-                                <label for="observacao" class="block text-verde-escuro font-bold mb-2">Observações (Opcional)</label>
+                                <label for="curriculo" class="block text-verde-escuro font-bold mb-2">Anexar Currículo</label>
+                                <input type="file" id="curriculo" name="curriculo" class="w-full text-sm text-cinza-claro file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-verde-suave file:text-verde-escuro hover:file:bg-cinza-botao hover:file:text-white" accept=".pdf,.doc,.docx">
+                                <p class="text-xs text-cinza-claro mt-1">Formatos aceites: PDF, DOC, DOCX. Tamanho máx: 10MB.</p>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="observacao" class="block text-verde-escuro font-bold mb-2">Observação (Opcional)</label>
                                 <textarea id="observacao" name="Observação" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao"></textarea>
                             </div>
                         </div>
@@ -164,7 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
                 <div>
                     <h3 class="font-bold text-lg mb-4">Sobre a Invitta</h3>
-                    <p class="text-cinza-claro text-sm">Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços ao domicílio de excelência.</p>
+                    <p class="text-cinza-claro text-sm">Cuidado e conforto no seu lar. A nossa missão é garantir o seu bem-estar com serviços de apoio domiciliário de excelência.</p>
                 </div>
                 <div>
                     <h3 class="font-bold text-lg mb-4">Navegação</h3>
@@ -194,7 +196,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-                <!-- RODAPÉ ATUALIZADO -->
                 <p class="text-cinza-claro text-sm">© 2025 Invitta - Todos os direitos reservados. <a href="politica-de-privacidade.html" class="underline hover:text-white">Política de Privacidade</a></p>
             </div>
         </div>
@@ -247,7 +248,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     reset: false
                 });
 
-                sr.reveal('.reveal-card');
+                sr.reveal('.reveal-section');
+                sr.reveal('.reveal-card', { interval: 150 });
             }
         });
     </script>
