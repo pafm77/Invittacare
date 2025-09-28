@@ -104,7 +104,9 @@
         <div class="py-20">
             <div class="container mx-auto px-6">
                 <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border-t-4 border-cinza-botao reveal-card">
-                    <p class="text-cinza-claro mb-8">Procuramos profissionais apaixonados e dedicados que partilhem os nossos valores de empatia, profissionalismo e dignidade. Se acredita que pode contribuir para a nossa missão, preencha o formulário abaixo.</p>
+                    <p class="text-cinza-claro mb-6">Procuramos profissionais apaixonados e dedicados que partilhem os nossos valores de empatia, profissionalismo e dignidade. Se acredita que pode contribuir para a nossa missão, preencha o formulário abaixo.</p>
+                    <!-- NOTA ADICIONADA -->
+                    <p class="text-cinza-claro mb-8 text-sm italic bg-gray-50 p-4 rounded-md">Por favor, após submeter os seus dados, envie o seu currículo para o e-mail: <a href="mailto:geral@invitta.pt" class="text-verde-escuro font-semibold underline hover:text-cinza-botao">geral@invitta.pt</a></p>
                     
                     <form action="https://formspree.io/f/xkgvldjl" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -137,12 +139,6 @@
                                     <option value="Pilates Clínico">Pilates Clínico</option>
                                     <option value="Outra">Outra</option>
                                 </select>
-                            </div>
-                            <!-- CAMPO DE ANEXO SUBSTITUÍDO POR LINK -->
-                            <div class="md:col-span-2">
-                                <label for="curriculo-link" class="block text-verde-escuro font-bold mb-2">Link para o Currículo (Opcional)</label>
-                                <input type="url" id="curriculo-link" name="curriculo_link" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cinza-botao" placeholder="Ex: Perfil de LinkedIn, Google Drive, etc.">
-                                <p class="text-xs text-cinza-claro mt-1">Pode colar aqui um link partilhável para o seu CV.</p>
                             </div>
                             <div class="md:col-span-2">
                                 <label for="observacao" class="block text-verde-escuro font-bold mb-2">Observação (Opcional)</label>
